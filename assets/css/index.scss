@@ -48,6 +48,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.hidden {
+    display: none;
+}
+
 *,
 ::before,
 ::after {
@@ -252,6 +256,9 @@ body {
                                     }
                                 }
                             }
+                            & * {
+                                cursor: pointer;
+                            }
                         }
                     }
                 }
@@ -395,13 +402,22 @@ body {
                             img {
                                 @extend %img;
                                 height: auto;
+                                position: relative;
+                                z-index: 2;
                             }
-                        }
-                        .banner-footer-shadow {
-                            position: absolute;
-                            bottom: -35%;
-                            left: -15%;
-                            z-index: 1;
+
+                            &::after {
+                                position: absolute;
+                                bottom: -20%;
+                                left: -20%;
+                                z-index: 1;
+                                content: "";
+                                background-image: url("../img/banner/banner-footer-shadow.png");
+                                background-size: 100% 100%;
+                                background-position: center;
+                                height: 100%;
+                                width: 50%;
+                            }
                         }
                     }
                     .banner-footer-content {
@@ -870,7 +886,7 @@ body {
                         }
                         .feature-body-bot-wrapper {
                             @extend %relative;
-                            height: 1200px;
+                            height: 1100px;
                             background-color: #fff;
 
                             .feature-chart-wrapper {
@@ -930,13 +946,114 @@ body {
                 .profile-body {
                     @extend %relative;
                     height: 100vh;
-                    background-color: red;
 
                     #particles-js3 {
                         @extend %particles;
                     }
 
                     .profile-body-container {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 2;
+                        max-width: 70vw;
+                        min-width: 70vw;
+                        background-color: #fff;
+                        border: 2px solid $yellow;
+                        border-radius: 20px;
+                        -webkit-box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
+                        box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
+
+                        .profile-body-content-grid {
+                            display: flex;
+                            align-items: flex-start;
+
+                            .profile-content-item {
+                                .profile-pricePlan {
+                                    &--header {
+                                        ul {
+                                            display: flex;
+                                            align-items: flex-start;
+
+                                            .pricePlan--header-title {
+                                                font-family: GILROY-BOLD;
+                                                font-size: 24px;
+                                                color: #c9c9c9;
+                                                display: block;
+                                                min-width: 150px;
+                                                max-width: 150px;
+                                                padding: 15px;
+                                                text-align: center;
+                                                border: 1px solid #acacac;
+                                                cursor: pointer;
+                                                transition: all 0.5s;
+
+                                                &.header-active {
+                                                    transition: all 0.5s;
+                                                    background-color: $yellow;
+                                                    color: #000;
+                                                    border: 1px solid #000000;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    &--body {
+                                        margin-top: 40px;
+                                        p {
+                                            font-size: 18px;
+                                            color: #000000;
+                                            font-family: GILROY-REGULAR;
+                                            margin-bottom: 20px;
+                                        }
+
+                                        .pricingPlansCalculator__slider {
+                                            @extend %relative;
+
+                                            // input slider
+                                            input[type="range"] {
+                                                -webkit-appearance: none;
+                                                width: 100%;
+                                                height: 5px;
+                                                background: #929496;
+                                                color: $yellow;
+                                                outline: none;
+                                                opacity: 1;
+                                                -webkit-transition: 0.2s;
+                                                transition: opacity 0.2s;
+
+                                                &::-webkit-slider-thumb {
+                                                    -webkit-appearance: none;
+                                                    appearance: none;
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    border: 0;
+                                                    background: url("../img/icon/range-thumb.png");
+                                                    background-size: 100% 100%;
+                                                    background-position: center;
+                                                    background-repeat: no-repeat;
+                                                    cursor: pointer;
+                                                }
+                                                &::-moz-range-thumb {
+                                                    width: 30px;
+                                                    height: 30px;
+                                                    border: 0;
+                                                    background: url("../img/icon/range-thumb.png");
+                                                    background-size: 100% 100%;
+                                                    background-position: center;
+                                                    background-repeat: no-repeat;
+                                                    cursor: pointer;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.item-left {
+                                    padding: 40px 20px 40px 40px;
+                                    border-right: 2px solid $yellow;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1134,10 +1251,68 @@ body {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: 9999;
+        transition: all 0.5s;
 
-        
+        .popup-box {
+            .popup-body {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                max-width: 60vw;
+                height: auto;
+                min-width: 60vw;
+                .popup-body-content {
+                    img {
+                        @extend %img;
+                        height: auto;
+                    }
+                }
+                .popup-close {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 1;
+                    padding: 15px;
+
+                    img {
+                        @extend %img;
+                        height: auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            &.pop3 {
+                .popup-body {
+                    .popup-close {
+                        top: 17%;
+                    }
+                    .popup-body-content {
+                        .popup-link {
+                            display: block;
+                            cursor: pointer;
+
+                            img {
+                                cursor: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.active {
+                display: block;
+                transition: all 0.5s;
+            }
+        }
+
+        &.active {
+            display: block;
+            transition: all 0.5s;
+        }
     }
 }
 

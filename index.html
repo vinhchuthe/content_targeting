@@ -89,9 +89,6 @@
                             <div class="banner-footer-img">
                                 <img src="./assets/img/banner/banner-footer-img.png" alt="">
                             </div>
-                            <div class="banner-footer-shadow">
-                                <img src="./assets/img/banner/banner-footer-shadow.png" alt="">
-                            </div>
                         </div>
                         <div class="banner-footer-content">
                             <div class="footer-content-grid">
@@ -635,7 +632,43 @@
 
                         <!-- profile-body-container -->
                         <div class="profile-body-container">
+                            <div class="profile-body-content-grid">
+                                <div class="profile-content-item item-left">
+                                    <div class="profile-pricePlan">
+                                        <div class="profile-pricePlan--header">
+                                            <ul>
+                                                <li class="pricePlan--header-title header-active" title-id="tab1">
+                                                    Standard
+                                                </li>
+                                                <li class="pricePlan--header-title" title-id="tab2">
+                                                    Advance
+                                                </li>
+                                                <li class="pricePlan--header-title" title-id="tab3">
+                                                    Premiums
+                                                </li>
+                                                <li class="pricePlan--header-title" title-id="tab4">
+                                                    Essentials
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="profile-pricePlan--body">
+                                            <p>Số lượng tệp độc giả mong muốn:</p>
+                                            <div class="pricingPlansCalculator__slider">
+                                                <div class="pricingPlansCalculator__tooltip is-loaded">
+                                                    <p class="text nor-text">Tối đa</p>
+                                                    <p class="text bold-text" id="tip">2,500</p>
+                                                    <p class="text nor-text">độc giả</p>
+                                                </div>
+                                                <input id="rng" type="range" min="0" max="4" step="1" value="0"
+                                                    class="av-range">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-content-item item-right">
 
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -831,126 +864,37 @@
         <!-- <div class="cursor"></div> -->
 
         <!-- Popup -->
-        <div class="popup" id="dialog">
-            <div class="popup-box" id="popup1">
-                <div class="popup-box--inner">
-                    <div class="popup-header">
-                        <div class="popup-header-grid">
-                            <div class="popup-grid-item grid-left">
-                                <p class="popup-header-text">Programmatic</p>
-                                <p class="popup-header-icon">...</p>
-                            </div>
-                            <div class="popup-grid-item grid-right">
-                                <div class="close-popup">
-                                    <img src="./assets/img/icon/close-btn.png" alt="">
-                                </div>
-                            </div>
-                        </div>
+        <div class="popup hidden" id="dialog">
+            <div class="popup-box pop1 hidden" id="popup1">
+                <div class="popup-body">
+                    <div class="popup-close">
+                        <img src="./assets/img/icon/close-btn.png" alt="">
                     </div>
-                    <div class="popup-body">
-                        <div class="popup-body-list">
-                            <div class="popup-body-row">
-                                <div class="popup-body-row-item row-item1">
-                                    <div class="popup-item-header">
-                                        <span class="header-icon">
-                                            <img src="./assets/img/popup/icon/popup1-icon1.png" alt="">
-                                        </span>
-                                        <p class="header-text">
-                                            Hành vi đọc báo online
-                                        </p>
-                                    </div>
-                                    <div class="popup-item-body">
-                                        <p>
-                                            Nhận diện các bài viết có nội dung chứa keywords, video, hình ảnh liên quan
-                                            đến ngành hàng/sản phẩm của bạn
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="popup-body-row-item row-item2">
-                                    <div class="popup-item-header">
-                                        <span class="header-icon">
-                                            <img src="./assets/img/popup/icon/popup1-icon2.png" alt="">
-                                        </span>
-                                        <p class="header-text">
-                                            Hành vi tìm kiếm
-                                        </p>
-                                    </div>
-                                    <div class="popup-item-body">
-                                        <p>
-                                            Nhận diện các độc giả có nhu cầu tìm kiếm các từ khóa liên quan đến chủ đề,
-                                            ngành hàng (vd: beauty, Hi-tech,...)
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="popup-body-row-item row-item3">
-                                    <div class="popup-item-header">
-                                        <span class="header-icon">
-                                            <img src="./assets/img/popup/icon/popup1-icon3.png" alt="">
-                                        </span>
-                                        <p class="header-text">
-                                            Hành vi truy cập
-                                            <br>
-                                            website nhãn hàng
-                                        </p>
-                                    </div>
-                                    <div class="popup-item-body">
-                                        <p>
-                                            người dùng đăng ký thông tin cá nhân, người dùng ở lại website 30s, người
-                                            dùng đã ghé thăm website cách đây 1 tháng,...
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popup-body-row">
-                                <div class="popup-body-row-item row-item4">
-                                    <div class="popup-item-header">
-                                        <span class="header-icon">
-                                            <img src="./assets/img/popup/icon/popup1-icon4.png" alt="">
-                                        </span>
-                                        <p class="header-text">
-                                            Tệp TA của KH
-                                        </p>
-                                    </div>
-                                    <div class="popup-item-body">
-                                        <p>
-                                            (vd: mẹ bỉm sửa, có con nhỏ dưới 3 tháng)
-                                        </p>
-                                        <p>
-                                            Hỗ trợ mở rộng tập độc giả từ tâp TA lõi (lookalike)
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="popup-body-row-item row-item5">
-                                    <div class="popup-item-header">
-                                        <span class="header-icon">
-                                            <img src="./assets/img/popup/icon/popup1-icon5.png" alt="">
-                                        </span>
-                                        <p class="header-text">
-                                            Thiết bị người dùng sử dụng
-                                        </p>
-                                    </div>
-                                    <div class="popup-item-body">
-                                        <p>
-                                            (iPhone X, Samsung Galaxy S8...) hoặc browser/OS, ISP (vd: Vietttel,
-                                            Vinaphone,...)
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="popup-body-row-item row-item6">
-                                    <div class="popup-item-header">
-                                        <span class="header-icon">
-                                            <img src="./assets/img/popup/icon/popup1-icon6.png" alt="">
-                                        </span>
-                                        <p class="header-text">
-                                            Target theo khu vực, thời tiết, theo nhiệt độ ngoài trời,...
-                                        </p>
-                                    </div>
-                                    <div class="popup-item-body">
-                                        <p></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="popup-body-content">
+                        <img src="./assets/img/popup/popup1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="popup-box pop2 hidden" id="popup2">
+                <div class="popup-body">
+                    <div class="popup-close">
+                        <img src="./assets/img/icon/close-btn.png" alt="">
+                    </div>
+                    <div class="popup-body-content">
+                        <img src="./assets/img/popup/popup2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="popup-box pop3 hidden" id="popup3">
+                <div class="popup-body">
+                    <div class="popup-close">
+                        <img src="./assets/img/icon/close-btn.png" alt="">
+                    </div>
+                    <div class="popup-body-content">
+                        <a href="https://drive.google.com/file/d/1qlGOhSjWfHc2bIqczsPJWTl4i3EGG0vc/view" target="_blank"
+                            class="popup-link">
+                            <img src="./assets/img/popup/popup3.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -958,6 +902,7 @@
     </div>
 
     <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/jquery-ui.js"></script>
     <script src="./assets/js/Tweenmax.js"></script>
     <script src="./assets/js/ScrollMagic.js"></script>
     <script src="./assets/js/animation.gsap.js"></script>

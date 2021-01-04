@@ -585,9 +585,38 @@ $("body").niceScroll({
     mousescrollstep: 20,
 });
 
+// -------------- Popup ----------------------
+
 // Open Popup
 $(".chart-box").click(function () {
     var popup_id = $(this).attr("data-id");
-    console.log(popup_id);
+    $("#" + popup_id).addClass("active");
+    $("#dialog").addClass("active");
+    // disable page scroll
+    $('body').on('wheel.modal mousewheel.modal', function () {
+        return false;
+    })
 });
+
+// Close Popup
+$(".popup-close").click(function () {
+    $("#dialog").removeClass("active");
+    $(".popup-box").removeClass("active");
+    // enable page scroll
+    $('body').off('wheel.modal mousewheel.modal');
+})
+
+// -------------- Range Slider --------------------
+
+var valMap = ["2.5k", "5k", "10k", "15k", "20k"];
+var rng = document.getElementById("rng");
+var ro = document.getElementById("tip");
+
+function updateRange() {
+    ro.textContent = valMap[parseInt(rng.value, 10)];
+    console.log("Selected value is: " + valMap[parseInt(rng.value, 10)] + ", Associated value is: " + rng.value);
+}
+
+window.addEventListener("DOMContentLoaded", updateRange);
+rng.addEventListener("input", updateRange);
 

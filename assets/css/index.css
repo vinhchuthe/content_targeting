@@ -57,12 +57,12 @@
   background-position: top;
 }
 
-.vct-wrapper, .vct-wrapper .main-content-wrapper, .vct-wrapper .main-content-wrapper .content-banner--inner, .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer, .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image, .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-content, .vct-wrapper .main-content-wrapper .content-issue, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-header-container, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-content-cotnainer, .vct-wrapper .main-content-wrapper .content-scroll, .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header, .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-body-wrapper, .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-body-wrapper .content-scroll-body, .vct-wrapper .main-content-wrapper .content-feature, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-top-wrapper, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-top-wrapper .feature-top-grid, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper .feature-chart-wrapper, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper .feature-chart-wrapper .feature-chart-body, .vct-wrapper .main-content-wrapper .content-profile, .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner, .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body, .vct-wrapper .main-content-wrapper .content-baogia, .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner, .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner .baogia-body, .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner .baogia-body .baogia-body-container, .vct-wrapper .footer-wrapper {
+.vct-wrapper, .vct-wrapper .main-content-wrapper, .vct-wrapper .main-content-wrapper .content-banner--inner, .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer, .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image, .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-content, .vct-wrapper .main-content-wrapper .content-issue, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-header-container, .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-content-cotnainer, .vct-wrapper .main-content-wrapper .content-scroll, .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header, .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-body-wrapper, .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-body-wrapper .content-scroll-body, .vct-wrapper .main-content-wrapper .content-feature, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-top-wrapper, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-top-wrapper .feature-top-grid, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper .feature-chart-wrapper, .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper .feature-chart-wrapper .feature-chart-body, .vct-wrapper .main-content-wrapper .content-profile, .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner, .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body, .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider, .vct-wrapper .main-content-wrapper .content-baogia, .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner, .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner .baogia-body, .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner .baogia-body .baogia-body-container, .vct-wrapper .footer-wrapper {
   position: relative;
   width: 100%;
 }
 
-.vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image .banner-footer-img img, .vct-wrapper .footer-wrapper-container .footer-wrapper-grid .footer-wrapper-logo img {
+.vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image .banner-footer-img img, .vct-wrapper .footer-wrapper-container .footer-wrapper-grid .footer-wrapper-logo img, .vct-wrapper .popup .popup-box .popup-body .popup-body-content img, .vct-wrapper .popup .popup-box .popup-body .popup-close img {
   width: 100%;
   display: block;
 }
@@ -101,6 +101,10 @@ body {
   line-height: normal;
   text-align: left;
   -webkit-font-smoothing: antialiased;
+}
+
+.hidden {
+  display: none;
 }
 
 *,
@@ -328,6 +332,10 @@ body {
   padding: 0 21px;
 }
 
+.vct-wrapper .header-container .header-grid .header-gird-col .header-navbar-sign .btn * {
+  cursor: pointer;
+}
+
 .vct-wrapper .main-content-wrapper {
   height: 100%;
   background: #fff;
@@ -463,13 +471,21 @@ body {
 
 .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image .banner-footer-img img {
   height: auto;
+  position: relative;
+  z-index: 2;
 }
 
-.vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image .banner-footer-shadow {
+.vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image .banner-footer-img::after {
   position: absolute;
-  bottom: -35%;
-  left: -15%;
+  bottom: -20%;
+  left: -20%;
   z-index: 1;
+  content: "";
+  background-image: url("../img/banner/banner-footer-shadow.png");
+  background-size: 100% 100%;
+  background-position: center;
+  height: 100%;
+  width: 50%;
 }
 
 .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-content {
@@ -934,7 +950,7 @@ body {
 }
 
 .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper {
-  height: 1200px;
+  height: 1100px;
   background-color: #fff;
 }
 
@@ -977,7 +993,116 @@ body {
 
 .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body {
   height: 100vh;
-  background-color: red;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: 70vw;
+  min-width: 70vw;
+  background-color: #fff;
+  border: 2px solid #f5df4d;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--header ul .pricePlan--header-title {
+  font-family: GILROY-BOLD;
+  font-size: 24px;
+  color: #c9c9c9;
+  display: block;
+  min-width: 150px;
+  max-width: 150px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #acacac;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--header ul .pricePlan--header-title.header-active {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: #f5df4d;
+  color: #000;
+  border: 1px solid #000000;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body {
+  margin-top: 40px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body p {
+  font-size: 18px;
+  color: #000000;
+  font-family: GILROY-REGULAR;
+  margin-bottom: 20px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #929496;
+  color: #f5df4d;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: 0.2s;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: url("../img/icon/range-thumb.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider input[type="range"]::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: url("../img/icon/range-thumb.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item.item-left {
+  padding: 40px 20px 40px 40px;
+  border-right: 2px solid #f5df4d;
 }
 
 .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner .baogia-body {
@@ -1174,8 +1299,63 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.vct-wrapper .popup .popup-box .popup-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 60vw;
+  height: auto;
+  min-width: 60vw;
+}
+
+.vct-wrapper .popup .popup-box .popup-body .popup-body-content img {
+  height: auto;
+}
+
+.vct-wrapper .popup .popup-box .popup-body .popup-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 15px;
+}
+
+.vct-wrapper .popup .popup-box .popup-body .popup-close img {
+  height: auto;
+  cursor: pointer;
+}
+
+.vct-wrapper .popup .popup-box.pop3 .popup-body .popup-close {
+  top: 17%;
+}
+
+.vct-wrapper .popup .popup-box.pop3 .popup-body .popup-body-content .popup-link {
+  display: block;
+  cursor: pointer;
+}
+
+.vct-wrapper .popup .popup-box.pop3 .popup-body .popup-body-content .popup-link img {
+  cursor: inherit;
+}
+
+.vct-wrapper .popup .popup-box.active {
+  display: block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.vct-wrapper .popup.active {
+  display: block;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 @-webkit-keyframes btn_sign-marquee {
