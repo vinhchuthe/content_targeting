@@ -451,7 +451,7 @@ particlesJS('particles-js4',
     }
 );
 
-// hover-img
+// ----------- hover-img -------------
 {
     const mapNumber = (X, A, B, C, D) => (X - A) * (D - C) / (B - A) + C;
     // from http://www.quirksmode.org/js/events_properties.html#position
@@ -567,18 +567,8 @@ particlesJS('particles-js4',
     [...document.querySelectorAll('[data-fx="1"] > a, a[data-fx="1"]')].forEach(link => new HoverImgFx1(link));
 }
 
-// Custom cursor
-// var cursor = document.querySelector('.cursor');
 
-// document.addEventListener('mousemove', function (e) {
-//     var x = e.clientX;
-//     var y = e.clientY;
-//     cursor.style.left = x + "px";
-//     cursor.style.top = y + "px";
-// });
-
-
-// NiceScroll
+// ------------- NiceScroll -----------------
 $("body").niceScroll({
     cursorcolor: '#2128bd',
     scrollspeed: '80',
@@ -606,17 +596,116 @@ $(".popup-close").click(function () {
     $('body').off('wheel.modal mousewheel.modal');
 })
 
-// -------------- Range Slider --------------------
+// -------------- Profile ----------------------
 
+// Range Slider
 var valMap = ["2.5k", "5k", "10k", "15k", "20k"];
 var rng = document.getElementById("rng");
 var ro = document.getElementById("tip");
+var tooltip = document.getElementById("tooltip");
+var prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
+
 
 function updateRange() {
     ro.textContent = valMap[parseInt(rng.value, 10)];
-    console.log("Selected value is: " + valMap[parseInt(rng.value, 10)] + ", Associated value is: " + rng.value);
+    // console.log("Selected value is: " + valMap[parseInt(rng.value, 10)] + ", Associated value is: " + rng.value);
 }
+
+function setBubble(range, bubble) {
+    const val = range.value;
+    const min = range.min ? range.min : 0;
+    const max = range.max ? range.max : 100;
+    const newVal = Number(((val - min) * 100) / (max - min));
+    // bubble.innerHTML = val;
+
+    // Sorta magic numbers based on size of the native UI thumb
+    bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
+}
+
 
 window.addEventListener("DOMContentLoaded", updateRange);
 rng.addEventListener("input", updateRange);
+rng.addEventListener("input", () => {
+    setBubble(rng, tooltip);
+});
+rng.addEventListener("input", () => {
+    var bval = parseInt(rng.value, 10);
+    var pos = (bval - rng.getAttribute('min')) / (rng.getAttribute('max') - rng.getAttribute('min'));
+    pos = Math.round(pos * 99);
+    var grad = 'linear-gradient(90deg, #FFEB3B ' + pos + '%,#929496 ' + (pos + 1) + '%)';
+    rng.style.background = grad;
+})
+
+// Tab
+$(".pricePlan--header-title").click(function () {
+    var tab = $(this).attr("title-id");
+    $(".pricePlan--header-title").removeClass("header-active");
+    $(this).addClass("header-active");
+    $(".tab-content").removeClass("tab-active");
+    $("#" + tab).addClass("tab-active");
+});
+
+// ------------------ Scroll ---------------------
+var controller = new ScrollMagic.Controller();
+
+var wipe = new TimelineMax().fromTo("#scroll .content-scroll-body", 1, { x: 0 }, { x: "-100%", ease: Linear.easeNone });
+
+
+new ScrollMagic.Scene({
+    triggerElement: "#scroll",
+    duration: "100%",
+    triggerHook: "onLeave",
+})
+    .setPin("#scroll")
+    .setTween(wipe)
+    .addTo(controller);
+
+// Cursor
+var cur = $("#scroll .cursor");
+var wrap = $("#scroll .scroll-body-item")
+
+function showCursor(e) {
+    TweenMax.to(cur, 0.3, {
+        css: {
+            left: e.pageX,
+            top: e.pageY
+        }
+    });
+}
+
+var flag = false;
+$(wrap).mouseover(function () {
+    flag = true;
+    // TweenMax.to(cur, 0.4, { scale: 1, autoAlpha: 1 })
+    $(wrap).on('mousemove', showCursor);
+});
+$(wrap).mouseout(function () {
+    flag = false;
+    // TweenMax.to(cur, 0.4, { scale: 0.1, autoAlpha: 0 })
+});
+
+
+// ------------------- banner ---------------------
+
+var circle = $(".header-shape-item");
+
+function moveCircle(e) {
+    TweenMax.staggerTo(circle, 0.5, {
+        css: {
+            left: e.pageX - 50,
+            top: e.pageY - 250
+        }
+    }, 0.1);
+}
+
+$(document).on('mousemove', moveCircle);
+
+
+// ------------------- feature ----------------------
+$(".grid-list-item").on("mouseenter", function () {
+    $(".grid-list-item").removeClass("item-active");
+    $(this).addClass("item-active");
+    var feature_img = $(this).attr("data-id");
+    console.log(feature_img);
+});
 

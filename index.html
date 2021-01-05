@@ -93,7 +93,8 @@
                         <div class="banner-footer-content">
                             <div class="footer-content-grid">
                                 <div class="footer-content-grid-col col-left">
-                                    <a href="#" class="footer-nav-link">
+                                    <a href="https://tuyenbai.admicro.vn/demo/travel/" target="_blank"
+                                        class="footer-nav-link">
                                         Xem bài
                                         <span><img src="./assets/img/icon/arrow-gray.png" alt=""></span>
                                     </a>
@@ -209,7 +210,7 @@
             <!--End Issue -->
 
             <!-- Scroll -->
-            <div class="content-scroll">
+            <div class="content-scroll" id="scroll">
                 <div class="content-scroll-header">
                     <div class="scroll-header-grid">
                         <div class="scroll-header-grid-item scroll-header-1">
@@ -266,19 +267,18 @@
                     </div>
                 </div>
                 <div class="content-scroll-body-wrapper">
-                    <div class="content-scroll-body" data-fx="1">
-                        <a class="scroll-body-item item1" data-img="./assets/img/scroll/hover-img.png"
-                            data-text="Tận dụng tối đa lượng data có được">
+                    <div class="content-scroll-body">
+                        <div class="scroll-body-item item1" hover-img="./assets/img/scroll/hover-img.png">
                             Tận dụng tối đa lượng <br> data có được
-                        </a>
-                        <a class="scroll-body-item item2" data-img="./assets/img/scroll/hover-img.png"
-                            data-text="Tăng hiệu quả performance">
+                        </div>
+                        <div class="scroll-body-item item2" hover-img="./assets/img/scroll/hover-img.png">
                             Tăng hiệu quả performance
-                        </a>
-                        <a class="scroll-body-item item3" data-img="./assets/img/scroll/hover-img.png"
-                            data-text="Tối ưu ngân sách của nhãn hàng">
+                        </div>
+                        <div class="scroll-body-item item3" hover-img="./assets/img/scroll/hover-img.png">
                             Tối ưu ngân sách của nhãn hàng
-                        </a>
+                        </div>
+
+                        <img class="cursor" src="">
                     </div>
                 </div>
             </div>
@@ -654,7 +654,7 @@
                                         <div class="profile-pricePlan--body">
                                             <p>Số lượng tệp độc giả mong muốn:</p>
                                             <div class="pricingPlansCalculator__slider">
-                                                <div class="pricingPlansCalculator__tooltip is-loaded">
+                                                <div class="pricingPlansCalculator__tooltip is-loaded" id="tooltip">
                                                     <p class="text nor-text">Tối đa</p>
                                                     <p class="text bold-text" id="tip">2,500</p>
                                                     <p class="text nor-text">độc giả</p>
@@ -666,7 +666,107 @@
                                     </div>
                                 </div>
                                 <div class="profile-content-item item-right">
-
+                                    <div class="profile-tab-content">
+                                        <div class="tab-content tab-hidden tab-active" id="tab1">
+                                            <div class="tab-content-header">
+                                                <p>Standard</p>
+                                                <div class="header-price">
+                                                    <p id="price-text">
+                                                        <span>Từ</span>
+                                                        30
+                                                        <span>triệu <br> vnd </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content-body">
+                                                <div class="tab-btn">
+                                                    <button type="button" class="detail-btn">Chi tiết</button>
+                                                </div>
+                                                <div class="tab-context">
+                                                    <p>01 bài viết chạy targeting và gắn 1 CTA</p>
+                                                    <p>Tệp độc giả (theo đúng TA mong muốn) tối đa 5.000 user</p>
+                                                    <p>Phân tích số liệu và insight từ tệp thông tin trên</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content tab-hidden" id="tab2">
+                                            <div class="tab-content-header">
+                                                <p>Advance</p>
+                                                <div class="header-price">
+                                                    <p id="price-text">
+                                                        <span>Từ</span>
+                                                        50
+                                                        <span>triệu <br> vnd </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content-body">
+                                                <div class="tab-btn">
+                                                    <button type="button" class="detail-btn">Chi tiết</button>
+                                                </div>
+                                                <div class="tab-context">
+                                                    <p>
+                                                        01 bài viết chạy targeting (interactive content) và gắn 1 CTA
+                                                        với
+                                                        nội dung được customize theo độc giả
+                                                    </p>
+                                                    <p>Tệp độc giả (theo đúng TA mong muốn) tối đa 10.000 user</p>
+                                                    <p>Phân tích số liệu và insight từ tệp thông tin trên</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content tab-hidden" id="tab3">
+                                            <div class="tab-content-header">
+                                                <p>Premiums</p>
+                                                <div class="header-price">
+                                                    <p id="price-text">
+                                                        <span>Từ</span>
+                                                        70
+                                                        <span>triệu <br> vnd </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content-body">
+                                                <div class="tab-btn">
+                                                    <button type="button" class="detail-btn">Chi tiết</button>
+                                                </div>
+                                                <div class="tab-context">
+                                                    <p>
+                                                        01 bài viết chạy targeting (interactive content) và gắn CTA với
+                                                        nội dung được customize theo độc giả
+                                                    </p>
+                                                    <p>Tệp độc giả (theo đúng TA mong muốn) tối đa 10.000 user</p>
+                                                    <p>Phân tích số liệu và insight từ tệp thông tin trên</p>
+                                                    <p>Hỗ trợ tư vấn campaign retargeting tiếp theo</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content tab-hidden" id="tab4">
+                                            <div class="tab-content-header">
+                                                <p>Essentials</p>
+                                                <div class="header-price hide-price">
+                                                    <p id="price-text">
+                                                        <span>Từ</span>
+                                                        70
+                                                        <span>triệu <br> vnd </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="tab-content-body">
+                                                <div class="tab-btn">
+                                                    <button type="button" class="detail-btn">Chi tiết</button>
+                                                </div>
+                                                <div class="tab-context">
+                                                    <p>
+                                                        Khách hàng tùy chọn số lượng bài viết chạy targeting và tệp TA
+                                                        (số lượng độc giả/insight mong muốn)
+                                                    </p>
+                                                    <p>Hỗ trợ tư vấn toàn bộ chiến dịch</p>
+                                                    <p>PR và retargeting tiếp theo</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

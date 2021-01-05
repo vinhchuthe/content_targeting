@@ -871,9 +871,12 @@ body {
   min-width: 672px;
 }
 
-.vct-wrapper .main-content-wrapper .content-scroll .content-scroll-body-wrapper .content-scroll-body .scroll-body-item .hover-reveal {
-  width: 200px;
-  height: 400px;
+.vct-wrapper .main-content-wrapper .content-scroll .content-scroll-body-wrapper .content-scroll-body .cursor {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background-color: red;
 }
 
 .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner {
@@ -934,6 +937,8 @@ body {
   line-height: 1.25;
   color: #000;
   margin-bottom: 25px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-top-wrapper .feature-top-grid .feature-top-grid-item .grid-list ul .grid-list-item:last-child {
@@ -943,6 +948,8 @@ body {
 .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-top-wrapper .feature-top-grid .feature-top-grid-item .grid-list ul .grid-list-item.item-active {
   -webkit-text-stroke: 0;
   -webkit-text-fill-color: black;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-top-wrapper .feature-top-grid .feature-top-grid-item.item-left {
@@ -1002,8 +1009,8 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 2;
-  max-width: 70vw;
-  min-width: 70vw;
+  max-width: 75vw;
+  min-width: 75vw;
   background-color: #fff;
   border: 2px solid #f5df4d;
   border-radius: 20px;
@@ -1034,14 +1041,15 @@ body {
   font-size: 24px;
   color: #c9c9c9;
   display: block;
-  min-width: 150px;
-  max-width: 150px;
   padding: 15px;
   text-align: center;
   border: 1px solid #acacac;
   cursor: pointer;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
 }
 
 .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--header ul .pricePlan--header-title.header-active {
@@ -1061,6 +1069,13 @@ body {
   color: #000000;
   font-family: GILROY-REGULAR;
   margin-bottom: 20px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider {
+  left: 10%;
+  width: 90%;
+  margin: 30px 0 20px;
+  padding-top: 100px;
 }
 
 .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider input[type="range"] {
@@ -1086,7 +1101,8 @@ body {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  cursor: pointer;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider input[type="range"]::-moz-range-thumb {
@@ -1097,12 +1113,138 @@ body {
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: grab;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider input[type="range"]::before {
+  content: "";
+  width: 10%;
+  height: 5px;
+  background-color: #f5df4d;
+  left: -10%;
+  left: -9.5%;
+  position: absolute;
+  bottom: 4px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider .pricingPlansCalculator__tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 1;
+  text-align: center;
+  padding: 10px 15px;
+  min-width: 90px;
+  max-width: 90px;
+  border-radius: 15px;
+  border: 2px solid #000;
+  background-color: #fff;
+  -webkit-transition: left 0.15s ease-in-out;
+  transition: left 0.15s ease-in-out;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider .pricingPlansCalculator__tooltip .text {
+  font-size: 14px;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider .pricingPlansCalculator__tooltip .text.nor-text {
+  font-family: GILROY-REGULAR;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__slider .pricingPlansCalculator__tooltip .text.bold-text {
+  font-family: GILROY-BOLD;
+  font-size: 18px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-header p {
+  font-family: GILROY-LIGHT;
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-header .header-price p {
+  font-family: GILROY-BOLD;
+  font-size: 45px;
+  color: #f5df4d;
+  position: relative;
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-header .header-price p span {
+  position: absolute;
+  display: inline-block;
+  font-family: GILROY-LIGHT;
+  font-size: 14px;
+  color: #000;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-header .header-price p span:first-child {
+  top: -15px;
+  left: 0;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-header .header-price p span:last-child {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -35px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-header .header-price.hide-price {
+  opacity: 0;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-body .tab-btn {
+  margin-bottom: 20px;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-body .tab-btn .detail-btn {
+  background-color: #f5df4d;
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-family: GILROY-REGULAR;
+  font-size: 18px;
   cursor: pointer;
 }
 
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-body .tab-context p {
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 20px;
+  font-family: GILROY-REGULAR;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-body .tab-context p:last-child {
+  margin-bottom: 0;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content.tab-hidden {
+  display: none;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content.tab-active {
+  display: block;
+}
+
 .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item.item-left {
-  padding: 40px 20px 40px 40px;
-  border-right: 2px solid #f5df4d;
+  padding: 40px;
+  width: 70%;
+}
+
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item.item-right {
+  padding: 40px;
+  width: 30%;
+  border-left: 2px solid #f5df4d;
 }
 
 .vct-wrapper .main-content-wrapper .content-baogia .content-baogia--inner .baogia-body {
@@ -1275,22 +1417,6 @@ body {
 
 .vct-wrapper .footer-wrapper-container .footer-wrapper-grid .footer-wrapper-social .footer-social-link:last-child {
   margin-right: 0;
-}
-
-.vct-wrapper .cursor {
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  background-color: #2128bd;
-  position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  pointer-events: none;
-  -webkit-transition: -webkit-transform 200ms ease-out;
-  transition: -webkit-transform 200ms ease-out;
-  transition: transform 200ms ease-out;
-  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
-  z-index: 999;
 }
 
 .vct-wrapper .popup {
