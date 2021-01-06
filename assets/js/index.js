@@ -661,28 +661,62 @@ new ScrollMagic.Scene({
     .addTo(controller);
 
 // Cursor
-var cur = $("#scroll .cursor");
-var wrap = $("#scroll .scroll-body-item")
+// function moveTip(e) {
+//     TweenMax.to($("#tooltip"), 0.3, {
+//         css: {
+//             left: e.pageX,
+//             top: e.pageY
+//         }
+//     });
+// }
 
-function showCursor(e) {
-    TweenMax.to(cur, 0.3, {
-        css: {
-            left: e.pageX,
-            top: e.pageY
-        }
-    });
-}
+// $(".scroll-body-item").on("mouseenter", function () {
+//     var hover = $(this).attr("hover-img");
+//     console.log("'" + hover + "'");
+//     $("#tooltip").attr("src", "'" + hover + "'");
+//     TweenMax.to($("#tooltip"), 0.5, { scale: 1, autoAlpha: 1 });
+//     $(window).on("mousemove", moveTip);
+// })
+// $(".scroll-body-item").on("mouseleave", function () {
+//     TweenMax.to($("#tooltip"), 0.5, { scale: 0, autoAlpha: 0 });
+//     console.log("leave");
+// })
 
-var flag = false;
-$(wrap).mouseover(function () {
-    flag = true;
-    // TweenMax.to(cur, 0.4, { scale: 1, autoAlpha: 1 })
-    $(wrap).on('mousemove', showCursor);
-});
-$(wrap).mouseout(function () {
-    flag = false;
-    // TweenMax.to(cur, 0.4, { scale: 0.1, autoAlpha: 0 })
-});
+const link = document.querySelectorAll('.content-scroll-body > .scroll-body-item');
+const cursor = document.getElementById('scrollTip');
+
+
+// const animateit = function (e) {
+//     const span = this.querySelector('span');
+//     const { offsetX: x, offsetY: y } = e,
+//         { offsetWidth: width, offsetHeight: height } = this,
+
+//         move = 25,
+//         xMove = x / width * (move * 2) - move,
+//         yMove = y / height * (move * 2) - move;
+
+//     span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+
+//     if (e.type === 'mouseleave') span.style.transform = '';
+// };
+
+
+
+const editCursor = e => {
+    const { clientX: x, clientY: y } = e;
+    cursor.style.left = x + 'px';
+    cursor.style.top = y + 'px';
+};
+
+link.forEach(b => b.addEventListener('mouseenter', function (e) {
+    const img_link = b.getAttribute("hover-img");
+    cursor.style.backgroundImage = "url(" + "'" + img_link + "'" + ")";
+}));
+link.forEach(b => b.addEventListener('mouseleave', function (e) {
+    cursor.style.backgroundImage = "url()";
+}));
+// link.forEach(b => b.addEventListener('mouseleave', animateit));
+window.addEventListener('mousemove', editCursor);
 
 
 // ------------------- banner ---------------------
@@ -698,7 +732,7 @@ function moveCircle(e) {
     }, 0.1);
 }
 
-$(document).on('mousemove', moveCircle);
+$("#banner").on('mousemove', moveCircle);
 
 
 // ------------------- feature ----------------------
@@ -706,6 +740,33 @@ $(".grid-list-item").on("mouseenter", function () {
     $(".grid-list-item").removeClass("item-active");
     $(this).addClass("item-active");
     var feature_img = $(this).attr("data-id");
-    console.log(feature_img);
+    // console.log(feature_img);
+    $(".grid-img").removeClass("img-active");
+    $("#" + feature_img).addClass("img-active");
+});
+
+
+// ----------------------- Menu -----------------------
+$(".navbar-item-link").click(function () {
+    $(".sub-menu").toggleClass("active");
+});
+
+var nav_link = $(".sub-menu-item-link");
+$(".sub-menu-item-link").on("click", function () {
+    var href = $(this).attr("href");
+    topY = $(href).offset().top;
+    if ($(".sub-menu").hasClass("active")) {
+        $(".sub-menu").removeClass("active");
+    }
+
+    TweenMax.to($(window), 1, {
+        scrollTo: {
+            y: topY,
+            autoKill: true
+        },
+        ease: Power3.easeOut
+    })
+
+    return false;
 });
 

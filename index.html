@@ -27,19 +27,19 @@
                         <div class="header-navbar-nav">
                             <ol>
                                 <li class="header-navbar-item">
-                                    <a href="#" class="navbar-item-link">Vấn đề</a>
+                                    <a class="navbar-item-link">Vấn đề</a>
                                     <ul class="sub-menu">
                                         <li class="sub-menu-item">
-                                            <a href="#" class="sub-menu-item-link">Vấn đề</a>
+                                            <a href="#issue" class="sub-menu-item-link">Vấn đề</a>
                                         </li>
                                         <li class="sub-menu-item">
-                                            <a href="#" class="sub-menu-item-link">Giải pháp</a>
+                                            <a href="#scroll" class="sub-menu-item-link">Giải pháp</a>
                                         </li>
                                         <li class="sub-menu-item">
-                                            <a href="#" class="sub-menu-item-link">Điểm nổi bật</a>
+                                            <a href="#feature" class="sub-menu-item-link">Điểm nổi bật</a>
                                         </li>
                                         <li class="sub-menu-item">
-                                            <a href="#" class="sub-menu-item-link">Báo giá</a>
+                                            <a href="#baogia" class="sub-menu-item-link">Báo giá</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -61,7 +61,7 @@
         <!-- main content -->
         <div class="main-content-wrapper">
             <!-- banner -->
-            <div class="content-banner">
+            <div class="content-banner" id="banner">
                 <div class="content-banner--inner">
                     <div class="banner-body">
                         <div class="banner-body-container">
@@ -138,7 +138,7 @@
             <!--End banner -->
 
             <!-- Issue -->
-            <div class="content-issue">
+            <div class="content-issue" id="issue">
                 <div class="content-issue--inner">
                     <div class="issue-body">
                         <!-- particles-bubble -->
@@ -270,22 +270,23 @@
                     <div class="content-scroll-body">
                         <div class="scroll-body-item item1" hover-img="./assets/img/scroll/hover-img.png">
                             Tận dụng tối đa lượng <br> data có được
+                            <span></span>
                         </div>
                         <div class="scroll-body-item item2" hover-img="./assets/img/scroll/hover-img.png">
                             Tăng hiệu quả performance
+                            <span></span>
                         </div>
                         <div class="scroll-body-item item3" hover-img="./assets/img/scroll/hover-img.png">
                             Tối ưu ngân sách của nhãn hàng
+                            <span></span>
                         </div>
-
-                        <img class="cursor" src="">
                     </div>
                 </div>
             </div>
             <!-- End Scroll -->
 
             <!-- Feature -->
-            <div class="content-feature">
+            <div class="content-feature" id="feature">
                 <div class="content-feature--inner">
                     <div class="feature-body">
                         <!-- particles-bubble -->
@@ -296,8 +297,21 @@
                             <div class="feature-body-top-wrapper">
                                 <div class="feature-top-grid">
                                     <div class="feature-top-grid-item item-left">
-                                        <div class="grid-img img-active" id="img1">
+                                        <div class="grid-img img-hidden img-active" id="img1">
+                                            <div class="grid-item-overlay"></div>
                                             <img src="./assets/img/feature/feature-img1.png" alt="">
+                                        </div>
+                                        <div class="grid-img img-hidden" id="img2">
+                                            <div class="grid-item-overlay"></div>
+                                            <img src="./assets/img/feature/feature-img2.png" alt="">
+                                        </div>
+                                        <div class="grid-img img-hidden" id="img3">
+                                            <div class="grid-item-overlay"></div>
+                                            <img src="./assets/img/feature/feature-img3.png" alt="">
+                                        </div>
+                                        <div class="grid-img img-hidden" id="img4">
+                                            <div class="grid-item-overlay"></div>
+                                            <img src="./assets/img/feature/feature-img4.png" alt="">
                                         </div>
                                     </div>
                                     <div class="feature-top-grid-item item-right">
@@ -624,7 +638,7 @@
             <!-- End Feature -->
 
             <!-- profile -->
-            <div class="content-profile">
+            <div class="content-profile" id="profile">
                 <div class="content-profile--inner">
                     <div class="profile-body">
                         <!-- particles-bubble -->
@@ -776,7 +790,7 @@
             <!-- End profile -->
 
             <!-- Báo giá -->
-            <div class="content-baogia">
+            <div class="content-baogia" id="baogia">
                 <div class="content-baogia--inner">
                     <div class="baogia-body">
                         <!-- particles-bubble -->
@@ -960,9 +974,6 @@
         </div>
         <!-- End Footer -->
 
-        <!-- Custom cursor -->
-        <!-- <div class="cursor"></div> -->
-
         <!-- Popup -->
         <div class="popup hidden" id="dialog">
             <div class="popup-box pop1 hidden" id="popup1">
@@ -999,18 +1010,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- Tooltip -->
+        <div id="scrollTip" class="tooltip"></div>
     </div>
 
     <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/jquery-ui.js"></script>
     <script src="./assets/js/Tweenmax.js"></script>
+    <script src="./assets/js/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/ScrollMagic.js"></script>
     <script src="./assets/js/animation.gsap.js"></script>
-    <script src="./assets/js/debug.addIndicators.js"></script>
     <script src="./assets/js/jquery.nicescroll.js"></script>
     <script src="./assets/js/particles.js"></script>
-    <script src="./assets/js/charming.min.js"></script>
-    <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 
