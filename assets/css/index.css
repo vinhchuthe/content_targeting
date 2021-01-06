@@ -1546,4 +1546,10 @@ body {
             transform: translate3d(-100%, 0, 0);
   }
 }
+
+@media (max-width: 1300px) {
+  .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper {
+    height: 900px;
+  }
+}
 /*# sourceMappingURL=index.css.map */

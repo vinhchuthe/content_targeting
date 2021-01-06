@@ -661,46 +661,8 @@ new ScrollMagic.Scene({
     .addTo(controller);
 
 // Cursor
-// function moveTip(e) {
-//     TweenMax.to($("#tooltip"), 0.3, {
-//         css: {
-//             left: e.pageX,
-//             top: e.pageY
-//         }
-//     });
-// }
-
-// $(".scroll-body-item").on("mouseenter", function () {
-//     var hover = $(this).attr("hover-img");
-//     console.log("'" + hover + "'");
-//     $("#tooltip").attr("src", "'" + hover + "'");
-//     TweenMax.to($("#tooltip"), 0.5, { scale: 1, autoAlpha: 1 });
-//     $(window).on("mousemove", moveTip);
-// })
-// $(".scroll-body-item").on("mouseleave", function () {
-//     TweenMax.to($("#tooltip"), 0.5, { scale: 0, autoAlpha: 0 });
-//     console.log("leave");
-// })
-
 const link = document.querySelectorAll('.content-scroll-body > .scroll-body-item');
 const cursor = document.getElementById('scrollTip');
-
-
-// const animateit = function (e) {
-//     const span = this.querySelector('span');
-//     const { offsetX: x, offsetY: y } = e,
-//         { offsetWidth: width, offsetHeight: height } = this,
-
-//         move = 25,
-//         xMove = x / width * (move * 2) - move,
-//         yMove = y / height * (move * 2) - move;
-
-//     span.style.transform = `translate(${xMove}px, ${yMove}px)`;
-
-//     if (e.type === 'mouseleave') span.style.transform = '';
-// };
-
-
 
 const editCursor = e => {
     const { clientX: x, clientY: y } = e;
@@ -715,7 +677,6 @@ link.forEach(b => b.addEventListener('mouseenter', function (e) {
 link.forEach(b => b.addEventListener('mouseleave', function (e) {
     cursor.style.backgroundImage = "url()";
 }));
-// link.forEach(b => b.addEventListener('mouseleave', animateit));
 window.addEventListener('mousemove', editCursor);
 
 

@@ -1385,7 +1385,7 @@ body {
         z-index: 3;
         width: 250px;
         height: 350px;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         transition: transform 0.3s ease;
         // mix-blend-mode: difference;
         background-repeat: no-repeat;
@@ -1472,5 +1472,31 @@ body {
     }
     100% {
         transform: translate3d(-100%, 0, 0);
+    }
+}
+
+// ---------------- Responsive -----------------------
+@media (max-width: 2000px) {}
+@media (max-width: 1600px) {}
+@media (max-width: 1400px) {}
+@media (max-width: 1300px) {
+    .vct-wrapper {
+        // main-content
+        .main-content-wrapper {
+            .content-feature {
+                .content-feature--inner {
+                    .feature-body {
+                        .feature-body-container {
+                            .feature-body-bot-wrapper {
+                                height: 900px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-baogia {
+
+            }
+        }
     }
 }
