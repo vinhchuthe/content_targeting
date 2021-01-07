@@ -1476,12 +1476,143 @@ body {
 }
 
 // ---------------- Responsive -----------------------
-@media (max-width: 2000px) {}
-@media (max-width: 1600px) {}
-@media (max-width: 1400px) {}
+@media (min-width: 2001px) {
+}
+@media (min-width: 1900px) {
+    .vct-wrapper {
+        .main-content-wrapper {
+            .content-issue {
+                .content-issue--inner {
+                    .issue-body {
+                        .issue-body-container {
+                            max-width: 1600px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+            .content-feature {
+                .content-feature--inner {
+                    .feature-body {
+                        .feature-body-container {
+                            .feature-body-top-wrapper {
+                                .feature-top-grid {
+                                    max-width: 1600px;
+                                    margin: 0 auto;
+
+                                    .feature-top-grid-item {
+                                        &.item-left {
+                                            .grid-img {
+                                                max-width: 550px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .feature-body-bot-wrapper {
+                                .feature-chart-wrapper {
+                                    max-width: 1600px;
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-profile {
+                .content-profile--inner {
+                    .profile-body {
+                        max-width: 1600px;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            .content-baogia {
+                .content-baogia--inner {
+                    .baogia-body {
+                        .baogia-body-container {
+                            max-width: 1600px;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+        .tooltip {
+            width: 400px;
+            height: 500px;
+        }
+    }
+}
+@media (max-width: 1599px) and (min-width: 1401px) {
+    .vct-wrapper {
+        .main-content-wrapper {
+            .content-banner {
+                padding: 0 0 100px 0;
+            }
+            .content-issue {
+                .content-issue--inner {
+                    .issue-body {
+                        .issue-body-container {
+                            height: 850px;
+                        }
+                    }
+                }
+            }
+            .content-feature {
+                .content-feature--inner {
+                    .feature-body {
+                        .feature-body-container {
+                            .feature-body-bot-wrapper {
+                                height: 1000px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1400px) and (min-width: 1301px) {
+    .vct-wrapper {
+        .main-content-wrapper {
+            .content-banner {
+                padding: 0 0 100px 0;
+                .content-banner--inner {
+                    .banner-sapo {
+                        margin: -180px 0 80px 0;
+                    }
+                }
+            }
+            .content-issue {
+                .content-issue--inner {
+                    .issue-body {
+                        .issue-body-container {
+                            height: 110vh;
+
+                            .issue-body-header-container {
+                                height: 40vh;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-feature {
+                .content-feature--inner {
+                    .feature-body {
+                        .feature-body-container {
+                            .feature-body-bot-wrapper {
+                                height: 950px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 1300px) {
     .vct-wrapper {
-        // main-content
         .main-content-wrapper {
             .content-feature {
                 .content-feature--inner {
@@ -1494,8 +1625,30 @@ body {
                     }
                 }
             }
+            .content-profile {
+                .content-profile--inner {
+                    .profile-body {
+                        .profile-body-container {
+                            max-width: 80vw;
+                            min-width: 80vw;
+                        }
+                    }
+                }
+            }
             .content-baogia {
-
+                .content-baogia--inner {
+                    .baogia-body {
+                        .baogia-body-container {
+                            .baogia-body-content {
+                                .baogia-body-grid {
+                                    .baogia-grid-box {
+                                        max-width: 270px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
