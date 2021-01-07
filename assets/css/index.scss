@@ -803,6 +803,18 @@ body {
                         max-width: 672px;
                         min-width: 672px;
                         transition: all 0.3s ease;
+
+                        .scroll-body-img {
+                            @extend %relative;
+
+                            img {
+                                @extend %img;
+                            }
+
+                            &.mb-show {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
@@ -974,15 +986,15 @@ body {
                         z-index: 2;
                         max-width: 75vw;
                         min-width: 75vw;
-                        background-color: #fff;
-                        border: 2px solid $yellow;
-                        border-radius: 20px;
-                        -webkit-box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
-                        box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
 
                         .profile-body-content-grid {
                             display: flex;
                             align-items: flex-start;
+                            background-color: #fff;
+                            border: 2px solid $yellow;
+                            border-radius: 20px;
+                            -webkit-box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
+                            box-shadow: 0px 6px 38px 7px rgba(0, 0, 0, 0.2);
 
                             .profile-content-item {
                                 .profile-pricePlan {
@@ -1197,6 +1209,15 @@ body {
                                     width: 30%;
                                     border-left: 2px solid $yellow;
                                 }
+                            }
+                        }
+                        .profile-body-header {
+                            p {
+                                font-family: GILROY-BOLD;
+                                font-size: 36px;
+                                line-height: 1;
+                                color: #000;
+                                margin-bottom: 30px;
                             }
                         }
                     }
@@ -1643,6 +1664,272 @@ body {
                                 .baogia-body-grid {
                                     .baogia-grid-box {
                                         max-width: 270px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .vct-wrapper {
+        overflow: hidden;
+
+        // Header
+        .header {
+        }
+        .main-content-wrapper {
+            .content-banner {
+                padding: 0 0 100px 0;
+                .content-banner--inner {
+                    .banner-body {
+                        .banner-body-container {
+                            .banner-body-header {
+                                .banner-body-header-shape {
+                                    display: none;
+                                }
+                                .banner-body-header-text {
+                                    color: $yellow;
+
+                                    h1 {
+                                        font-size: 60px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .banner-sapo {
+                        margin: -250px 0 70px 0;
+
+                        p {
+                            padding: 0 15px;
+                            font-size: 16px;
+                        }
+                    }
+                    .banner-footer {
+                        padding: 0 15px;
+                        .banner-footer-image {
+                            .banner-footer-img {
+                                max-width: unset;
+                                width: 100%;
+                                margin: 0;
+                            }
+                        }
+                        .banner-footer-content {
+                            .footer-content-grid {
+                                flex-direction: column;
+                                margin: 0;
+
+                                .footer-content-grid-col {
+                                    &.col-left {
+                                        margin: 0 0 20px 0;
+
+                                        .footer-nav-link {
+                                            justify-content: center;
+                                        }
+                                    }
+                                    &.col-right {
+                                        .footer-content-credit {
+                                            .footer-credit-item {
+                                                .credit-arrow {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-issue {
+                .content-issue--inner {
+                    .issue-body {
+                        .issue-body-container {
+                            height: 100%;
+                            padding: 0 0 50px 0;
+                            .issue-body-header-container {
+                                height: 150px;
+
+                                .issue-body-header {
+                                    .issue-body-header--text {
+                                        h3 {
+                                            font-size: 60px;
+                                        }
+                                    }
+                                }
+                            }
+                            .issue-body-content-cotnainer {
+                                .issue-content-grid {
+                                    flex-direction: column;
+
+                                    .issue-content-item {
+                                        max-width: 95vw;
+                                        margin: 0 auto 25px auto !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-scroll {
+                height: 100% !important;
+                padding-bottom: 40px;
+
+                .content-scroll-header {
+                    .scroll-header-grid {
+                        flex-direction: column;
+                        padding: 0 15px;
+
+                        .scroll-header-grid-item {
+                            margin-bottom: 20px;
+
+                            &:not(:first-child) {
+                                padding-top: 20px;
+                            }
+                        }
+                    }
+                }
+                .content-scroll-body-wrapper {
+                    .content-scroll-body {
+                        transform: none !important;
+                        margin: 0;
+                        flex-direction: column;
+                        height: 100%;
+
+                        .scroll-body-item {
+                            min-width: 100%;
+                            max-width: 100%;
+                            padding: 20px 15px 0;
+                            position: relative;
+                            font-size: 25px;
+                            margin: 15px 0 0;
+
+                            .scroll-body-img {
+                                &.mb-show {
+                                    display: block;
+                                }
+                            }
+
+                            &:not(:first-child) {
+                                padding: 0 15px;
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-feature {
+                .content-feature--inner {
+                    .feature-body {
+                        .feature-body-container {
+                            .feature-body-top-wrapper {
+                                height: 100%;
+                                padding: 30px 0 40px;
+                                .feature-top-grid {
+                                    flex-direction: column;
+
+                                    .feature-top-grid-item {
+                                        &.item-left {
+                                            margin-right: 0;
+                                            margin-bottom: 20px;
+                                        }
+                                        .grid-img {
+                                            max-width: 100%;
+                                        }
+                                        .grid-list {
+                                            ul {
+                                                .grid-list-item {
+                                                    padding: 0 15px;
+                                                    font-size: 25px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .feature-body-bot-wrapper {
+                                .feature-chart-wrapper {
+                                    .feature-chart-header {
+                                        .feature-chart-title {
+                                            font-size: 24px;
+                                            line-height: 1.2;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-profile {
+                .content-profile--inner {
+                    .profile-body {
+                        .profile-body-container {
+                            max-width: 85vw;
+                            min-width: 85vw;
+
+                            .profile-body-header {
+                                .profile-header-text {
+                                    font-size: 24px;
+                                }
+                            }
+                            .profile-body-content-grid {
+                                flex-direction: column;
+
+                                .profile-content-item {
+                                    &.item-left {
+                                        width: 100%;
+                                        padding: 40px 10px 20px;
+                                    }
+                                    &.item-right {
+                                        width: 100%;
+                                        padding: 20px 10px 30px;
+                                        border-left: none;
+                                        border-top: 2px solid #f5df4d;
+                                    }
+                                    .profile-pricePlan {
+                                        .profile-pricePlan--header {
+                                            ul {
+                                                .pricePlan--header-title {
+                                                    font-size: 11px;
+                                                    padding: 5px 10px;
+                                                }
+                                            }
+                                        }
+                                        .profile-pricePlan--body {
+                                            margin-top: 30px;
+                                            p {
+                                                font-size: 16px;
+                                            }
+                                            .pricingPlansCalculator__slider {
+                                                &.mb-hide {
+                                                    display: none;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .profile-tab-content {
+                                        .tab-content {
+                                            .tab-content-header {
+                                                p {
+                                                    font-size: 26px;
+                                                }
+                                                .header-price {
+                                                    p {
+                                                        font-size: 40px;
+                                                        span {
+                                                            font-size: 12px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
