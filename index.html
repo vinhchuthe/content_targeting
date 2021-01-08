@@ -27,18 +27,18 @@
                         <div class="header-navbar-nav">
                             <ol>
                                 <li class="header-navbar-item">
-                                    <a class="navbar-item-link">Vấn đề</a>
+                                    <a class="navbar-item-link">Content Targeting</a>
                                     <ul class="sub-menu">
-                                        <li class="sub-menu-item">
+                                        <li class="sub-menu-item" id="sub-menu1">
                                             <a href="#issue" class="sub-menu-item-link">Vấn đề</a>
                                         </li>
-                                        <li class="sub-menu-item">
+                                        <li class="sub-menu-item" id="sub-menu2">
                                             <a href="#scroll" class="sub-menu-item-link">Giải pháp</a>
                                         </li>
-                                        <li class="sub-menu-item">
+                                        <li class="sub-menu-item" id="sub-menu3">
                                             <a href="#feature" class="sub-menu-item-link">Điểm nổi bật</a>
                                         </li>
-                                        <li class="sub-menu-item">
+                                        <li class="sub-menu-item" id="sub-menu4">
                                             <a href="#baogia" class="sub-menu-item-link">Báo giá</a>
                                         </li>
                                     </ul>
@@ -63,6 +63,10 @@
             <!-- banner -->
             <div class="content-banner" id="banner">
                 <div class="content-banner--inner">
+
+                    <!-- particles-bubble -->
+                    <div id="particles-js0"></div>
+
                     <div class="banner-body">
                         <div class="banner-body-container">
                             <div class="banner-body-header">
@@ -95,7 +99,7 @@
                                 <div class="footer-content-grid-col col-left">
                                     <a href="https://tuyenbai.admicro.vn/demo/travel/" target="_blank"
                                         class="footer-nav-link">
-                                        Xem bài
+                                        <span class="footer-nav-link_title">Xem bài</span>
                                         <span><img src="./assets/img/icon/arrow-gray.png" alt=""></span>
                                     </a>
                                 </div>
@@ -303,40 +307,32 @@
                             <div class="feature-body-top-wrapper">
                                 <div class="feature-top-grid">
                                     <div class="feature-top-grid-item item-left">
-                                        <div class="grid-img img-hidden img-active" id="img1">
+                                        <div class="grid-img" id="fgrid-img">
                                             <div class="grid-item-overlay"></div>
                                             <img src="./assets/img/feature/feature-img1.png" alt="">
-                                        </div>
-                                        <div class="grid-img img-hidden" id="img2">
-                                            <div class="grid-item-overlay"></div>
-                                            <img src="./assets/img/feature/feature-img2.png" alt="">
-                                        </div>
-                                        <div class="grid-img img-hidden" id="img3">
-                                            <div class="grid-item-overlay"></div>
-                                            <img src="./assets/img/feature/feature-img3.png" alt="">
-                                        </div>
-                                        <div class="grid-img img-hidden" id="img4">
-                                            <div class="grid-item-overlay"></div>
-                                            <img src="./assets/img/feature/feature-img4.png" alt="">
                                         </div>
                                     </div>
                                     <div class="feature-top-grid-item item-right">
                                         <div class="grid-list">
                                             <ul>
-                                                <li class="grid-list-item item-active" data-id="img1">
+                                                <li class="grid-list-item item-active"
+                                                    data-id="./assets/img/feature/feature-img1.png">
                                                     Target bài được tới đúng tệp
                                                     <br>
                                                     TA của KH
                                                 </li>
-                                                <li class="grid-list-item" data-id="img2">
+                                                <li class="grid-list-item"
+                                                    data-id="./assets/img/feature/feature-img2.png">
                                                     Customize nội dung/thông điệp
                                                     <br>
                                                     marketing trong CTA tới từng tệp TA
                                                 </li>
-                                                <li class="grid-list-item" data-id="img3">
+                                                <li class="grid-list-item"
+                                                    data-id="./assets/img/feature/feature-img3.png">
                                                     Kéo traffic về trang đích mong muốn
                                                 </li>
-                                                <li class="grid-list-item" data-id="img4">
+                                                <li class="grid-list-item"
+                                                    data-id="./assets/img/feature/feature-img4.png">
                                                     Thu được tệp data user
                                                     <br>
                                                     (đọc bài/tương tác trong bài)
@@ -432,8 +428,7 @@
                                                             transform="translate(118.5 112.5)" fill="#f5df4d" />
                                                     </g>
                                                     <text id="Programmatic" transform="translate(304.906 5743.064)"
-                                                        font-size="24" font-family="Gilroy-Bold, Gilroy"
-                                                        font-weight="700">
+                                                        font-size="24" font-family="GILROY-BOLD" font-weight="700">
                                                         <tspan x="0" y="19">Programmatic</tspan>
                                                     </text>
                                                     <path id="Ellipse_2_copy_5" data-name="Ellipse 2 copy 5"
@@ -444,8 +439,8 @@
                                           
                                           - Content Insight
                                           - Brand connection
-                                          " transform="translate(306.188 5792.718)" font-size="18" font-family="Gilroy"
-                                                        letter-spacing="0.025em">
+                                          " transform="translate(306.188 5792.718)" font-size="18"
+                                                        font-family="GILROY-REGULAR" letter-spacing="0.025em">
                                                         <tspan x="0" y="14">Áp dụng công nghệ hướng tới tệp TA </tspan>
                                                         <tspan x="0" y="35.6">mong muốn</tspan>
                                                         <tspan x="0" y="57.2"></tspan>
@@ -466,7 +461,7 @@
                                                         height="1" transform="translate(972 5724)" fill="#d7d7d7" />
                                                     <text id="Content_Targeting" data-name="Content Targeting"
                                                         transform="translate(971.906 5743.064)" font-size="24"
-                                                        font-family="Gilroy-Bold, Gilroy" font-weight="700">
+                                                        font-family="GILROY-BOLD" font-weight="700">
                                                         <tspan x="0" y="19">Content Targeting</tspan>
                                                     </text>
                                                     <ellipse id="Ellipse_2_copy_8" data-name="Ellipse 2 copy 8"
@@ -484,7 +479,7 @@
                                           
                                           
                                           " transform="translate(973.188 5792.718)" fill="#939597" font-size="18"
-                                                        font-family="Gilroy" letter-spacing="0.025em">
+                                                        font-family="GILROY-REGULAR" letter-spacing="0.025em">
                                                         <tspan x="0" y="14">Trong bài có đính kèm các CTA với nội dung
                                                         </tspan>
                                                         <tspan x="0" y="35.6">được customize cho từng tệp độc giả
@@ -583,7 +578,7 @@
                                                     <text id="Retargeting_Campaign_" data-name="Retargeting
                                           Campaign
                                           " transform="translate(1478.906 6172.064)" font-size="24"
-                                                        font-family="Gilroy-Bold, Gilroy" font-weight="700">
+                                                        font-family="GILROY-BOLD" font-weight="700">
                                                         <tspan x="0" y="19">Retargeting</tspan>
                                                         <tspan x="0" y="47.8">Campaign</tspan>
                                                         <tspan font-family="Gilroy-Bold">
@@ -660,16 +655,17 @@
                                     <div class="profile-pricePlan">
                                         <div class="profile-pricePlan--header">
                                             <ul>
-                                                <li class="pricePlan--header-title header-active" title-id="tab1">
+                                                <li class="pricePlan--header-title" title-id="tab1" range="1">
                                                     Standard
                                                 </li>
-                                                <li class="pricePlan--header-title" title-id="tab2">
+                                                <li class="pricePlan--header-title" title-id="tab2" range="2">
                                                     Advance
                                                 </li>
-                                                <li class="pricePlan--header-title" title-id="tab3">
+                                                <li class="pricePlan--header-title" title-id="tab3" range="3">
                                                     Premiums
                                                 </li>
-                                                <li class="pricePlan--header-title" title-id="tab4">
+                                                <li class="pricePlan--header-title header-active" title-id="tab4"
+                                                    range="0">
                                                     Essentials
                                                 </li>
                                             </ul>
@@ -682,7 +678,7 @@
                                                     <p class="text bold-text" id="tip">2,500</p>
                                                     <p class="text nor-text">độc giả</p>
                                                 </div>
-                                                <input id="rng" type="range" min="0" max="4" step="1" value="0"
+                                                <input id="rng" type="range" min="0" max="5" step="1" value="0"
                                                     class="av-range">
                                             </div>
                                         </div>
@@ -690,7 +686,7 @@
                                 </div>
                                 <div class="profile-content-item item-right">
                                     <div class="profile-tab-content">
-                                        <div class="tab-content tab-hidden tab-active" id="tab1">
+                                        <div class="tab-content tab-hidden" id="tab1">
                                             <div class="tab-content-header">
                                                 <p>Standard</p>
                                                 <div class="header-price">
@@ -764,7 +760,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-content tab-hidden" id="tab4">
+                                        <div class="tab-content tab-hidden tab-active" id="tab4">
                                             <div class="tab-content-header">
                                                 <p>Essentials</p>
                                                 <div class="header-price hide-price">
