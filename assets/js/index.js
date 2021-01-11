@@ -594,6 +594,27 @@ $(".chart-box").click(function () {
     })
 });
 
+// Contact Popup
+// $(".btn_sign").click(function () {
+//     var popup = $(this).attr("btn-id");
+//     $("#" + popup).addClass("active");
+//     $("#dialog").addClass("active");
+//     // disable page scroll
+//     $('body').on('wheel.modal mousewheel.modal', function () {
+//         return false;
+//     })
+// });
+
+$(".chart-box").on("mouseenter", function () {
+    TweenMax.fromTo($(this), 0.1, { x: -4 },
+        {
+            x: 4,
+            repeat: 5,
+            yoyo: true,
+            ease: Quad.easeInOut
+        });
+});
+
 // Close Popup
 $(".popup-close").click(function () {
     $("#dialog").removeClass("active");
@@ -624,42 +645,42 @@ function updateRange() {
         $(".tab-content").removeClass("tab-active");
         $("#tab-header4").addClass("header-active");
         $("#tab4").addClass("tab-active");
-        console.log(tab);
+        // console.log(tab);
     } else if (num == 1) {
         tab = "tab4";
         $(".pricePlan--header-title").removeClass("header-active");
         $(".tab-content").removeClass("tab-active");
         $("#tab-header4").addClass("header-active");
         $("#tab4").addClass("tab-active");
-        console.log(tab);
+        // console.log(tab);
     } else if (num == 2) {
         tab = "tab1";
         $(".pricePlan--header-title").removeClass("header-active");
         $(".tab-content").removeClass("tab-active");
         $("#tab-header1").addClass("header-active");
         $("#tab1").addClass("tab-active");
-        console.log(tab);
+        // console.log(tab);
     } else if (num == 3) {
         tab = "tab2";
         $(".pricePlan--header-title").removeClass("header-active");
         $(".tab-content").removeClass("tab-active");
         $("#tab-header2").addClass("header-active");
         $("#tab2").addClass("tab-active");
-        console.log(tab);
+        // console.log(tab);
     } else if (num == 4) {
         tab = "tab3";
         $(".pricePlan--header-title").removeClass("header-active");
         $(".tab-content").removeClass("tab-active");
         $("#tab-header3").addClass("header-active");
         $("#tab3").addClass("tab-active");
-        console.log(tab);
+        // console.log(tab);
     } else if (num == 5) {
         tab = "tab4";
         $(".pricePlan--header-title").removeClass("header-active");
         $(".tab-content").removeClass("tab-active");
         $("#tab-header4").addClass("header-active");
         $("#tab4").addClass("tab-active");
-        console.log(tab);
+        // console.log(tab);
     }
 
 }
