@@ -1509,6 +1509,14 @@ body {
                         @extend %img;
                         height: auto;
                     }
+                    .popup-link {
+                        display: block;
+                        cursor: pointer;
+
+                        img {
+                            cursor: inherit;
+                        }
+                    }
                 }
                 .popup-close {
                     position: absolute;
@@ -1529,16 +1537,6 @@ body {
                 .popup-body {
                     .popup-close {
                         top: 17%;
-                    }
-                    .popup-body-content {
-                        .popup-link {
-                            display: block;
-                            cursor: pointer;
-
-                            img {
-                                cursor: inherit;
-                            }
-                        }
                     }
                 }
             }

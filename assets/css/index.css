@@ -1628,6 +1628,15 @@ body {
   height: auto;
 }
 
+.vct-wrapper .popup .popup-box .popup-body .popup-body-content .popup-link {
+  display: block;
+  cursor: pointer;
+}
+
+.vct-wrapper .popup .popup-box .popup-body .popup-body-content .popup-link img {
+  cursor: inherit;
+}
+
 .vct-wrapper .popup .popup-box .popup-body .popup-close {
   position: absolute;
   top: 0;
@@ -1643,15 +1652,6 @@ body {
 
 .vct-wrapper .popup .popup-box.pop3 .popup-body .popup-close {
   top: 17%;
-}
-
-.vct-wrapper .popup .popup-box.pop3 .popup-body .popup-body-content .popup-link {
-  display: block;
-  cursor: pointer;
-}
-
-.vct-wrapper .popup .popup-box.pop3 .popup-body .popup-body-content .popup-link img {
-  cursor: inherit;
 }
 
 .vct-wrapper .popup .popup-box.active {
