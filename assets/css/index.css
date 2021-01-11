@@ -489,7 +489,7 @@ body {
 }
 
 .vct-wrapper .main-content-wrapper .content-banner--inner .banner-footer .banner-footer-image .banner-footer-img {
-  max-width: 60vw;
+  width: 60vw;
   margin-right: -15%;
   height: auto;
   position: relative;
