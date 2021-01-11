@@ -615,27 +615,50 @@ var prefs = ['webkit-slider-runnable-track', 'moz-range-track', 'ms-track'];
 function updateRange() {
     var num = rng.value,
         tab;
-    console.log(num);
     ro.textContent = valMap[parseInt(rng.value, 10)];
     // console.log("Selected value is: " + valMap[parseInt(rng.value, 10)] + ", Associated value is: " + rng.value);
 
     if (num == 0) {
         tab = "tab4";
+        $(".pricePlan--header-title").removeClass("header-active");
+        $(".tab-content").removeClass("tab-active");
+        $("#tab-header4").addClass("header-active");
+        $("#tab4").addClass("tab-active");
         console.log(tab);
     } else if (num == 1) {
         tab = "tab4";
+        $(".pricePlan--header-title").removeClass("header-active");
+        $(".tab-content").removeClass("tab-active");
+        $("#tab-header4").addClass("header-active");
+        $("#tab4").addClass("tab-active");
         console.log(tab);
     } else if (num == 2) {
         tab = "tab1";
+        $(".pricePlan--header-title").removeClass("header-active");
+        $(".tab-content").removeClass("tab-active");
+        $("#tab-header1").addClass("header-active");
+        $("#tab1").addClass("tab-active");
         console.log(tab);
     } else if (num == 3) {
         tab = "tab2";
+        $(".pricePlan--header-title").removeClass("header-active");
+        $(".tab-content").removeClass("tab-active");
+        $("#tab-header2").addClass("header-active");
+        $("#tab2").addClass("tab-active");
         console.log(tab);
     } else if (num == 4) {
         tab = "tab3";
+        $(".pricePlan--header-title").removeClass("header-active");
+        $(".tab-content").removeClass("tab-active");
+        $("#tab-header3").addClass("header-active");
+        $("#tab3").addClass("tab-active");
         console.log(tab);
     } else if (num == 5) {
         tab = "tab4";
+        $(".pricePlan--header-title").removeClass("header-active");
+        $(".tab-content").removeClass("tab-active");
+        $("#tab-header4").addClass("header-active");
+        $("#tab4").addClass("tab-active");
         console.log(tab);
     }
 
@@ -643,7 +666,6 @@ function updateRange() {
 
 function setBubble(range, bubble) {
     const val = range.value;
-    console.log(val);
     const min = range.min ? range.min : 0;
     const max = range.max ? range.max : 100;
     const newVal = Number(((val - min) * 100) / (max - min));
