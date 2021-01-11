@@ -649,8 +649,9 @@ body {
                                     .issue-content-box {
                                         border-radius: 15px;
                                         padding: 25px;
-                                        -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
-                                        box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
+                                        -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.5);
+                                        box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.5);
+                                        transition: all 0.3s;
 
                                         &.box-yellow {
                                             background-color: $yellow;
@@ -669,6 +670,12 @@ body {
                                                     color: $gray;
                                                 }
                                             }
+                                        }
+                                        &:hover {
+                                            -webkit-box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+                                            box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+                                            transform: scale(1.1);
+                                            transition: all 0.3s;
                                         }
 
                                         .issue-box-header {
@@ -727,13 +734,15 @@ body {
                     .scroll-header-grid-item {
                         position: relative;
                         margin-right: 50px;
+                        transition: all 0.3s;
 
                         .scroll-header-box {
                             // height: 100px;
                             padding: 20px;
                             border-radius: 15px;
-                            -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
-                            box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
+                            -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.4);
+                            box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.4);
+                            transition: all 0.5s;
 
                             &.box-yellow {
                                 background-color: $yellow;
@@ -808,6 +817,7 @@ body {
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            transition: all 0.3s;
                         }
 
                         &.scroll-header-1 {
@@ -823,6 +833,19 @@ body {
                             .scroll-box-icon {
                                 background-color: $gray;
                             }
+                        }
+
+                        &:hover {
+                            .scroll-header-box {
+                                -webkit-box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+                                box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+                            }
+                            .scroll-box-icon {
+                                transform: rotate(360deg);
+                                transition: all 0.5s;
+                            }
+                            transform: scale(1.1);
+                            transition: all 0.3s;
                         }
                     }
                 }

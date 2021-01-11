@@ -752,8 +752,10 @@ body {
 .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-content-cotnainer .issue-content-grid .issue-content-item .issue-content-box {
   border-radius: 15px;
   padding: 25px;
-  -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-content-cotnainer .issue-content-grid .issue-content-item .issue-content-box.box-yellow {
@@ -774,6 +776,15 @@ body {
 
 .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-content-cotnainer .issue-content-grid .issue-content-item .issue-content-box.box-white .issue-box-content p {
   color: #939597;
+}
+
+.vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-content-cotnainer .issue-content-grid .issue-content-item .issue-content-box:hover {
+  -webkit-box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .vct-wrapper .main-content-wrapper .content-issue .content-issue--inner .issue-body .issue-body-container .issue-body-content-cotnainer .issue-content-grid .issue-content-item .issue-content-box .issue-box-header {
@@ -838,13 +849,17 @@ body {
 .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item {
   position: relative;
   margin-right: 50px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item .scroll-header-box {
   padding: 20px;
   border-radius: 15px;
-  -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item .scroll-header-box.box-yellow {
@@ -929,6 +944,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item.scroll-header-1 {
@@ -945,6 +962,25 @@ body {
 
 .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item.scroll-header-2 .scroll-box-icon {
   background-color: #939597;
+}
+
+.vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item:hover .scroll-header-box {
+  -webkit-box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+}
+
+.vct-wrapper .main-content-wrapper .content-scroll .content-scroll-header .scroll-header-grid .scroll-header-grid-item:hover .scroll-box-icon {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .vct-wrapper .main-content-wrapper .content-scroll .content-scroll-body-wrapper {
