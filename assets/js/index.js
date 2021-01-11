@@ -595,24 +595,22 @@ $(".chart-box").click(function () {
 });
 
 // Contact Popup
-// $(".btn_sign").click(function () {
-//     var popup = $(this).attr("btn-id");
-//     $("#" + popup).addClass("active");
-//     $("#dialog").addClass("active");
-//     // disable page scroll
-//     $('body').on('wheel.modal mousewheel.modal', function () {
-//         return false;
-//     })
-// });
+$(".btn_sign").click(function () {
+    var popup = $(this).attr("btn-id");
+    $("#" + popup).addClass("active");
+    $("#dialog").addClass("active");
+    // disable page scroll
+    $('body').on('wheel.modal mousewheel.modal', function () {
+        return false;
+    })
+});
 
 $(".chart-box").on("mouseenter", function () {
-    TweenMax.fromTo($(this), 0.1, { x: -4 },
-        {
-            x: 4,
-            repeat: 5,
-            yoyo: true,
-            ease: Quad.easeInOut
-        });
+    TweenMax.to($(this), 0.5, { scale: 1.05, transformOrigin: "50% 50%" });
+});
+
+$(".chart-box").on("mouseleave", function () {
+    TweenMax.to($(this), 0.5, { scale: 1, transformOrigin: "50% 50%" });
 });
 
 // Close Popup
