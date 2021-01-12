@@ -594,6 +594,23 @@ $(".chart-box").click(function () {
     })
 });
 
+// Demo Validate
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function validatePhone(number) {
+    var phoneno1 = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    var phoneno2 = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+
+    if (number.match(phoneno1) || number.match(phoneno2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 // Contact Popup
 $(".btn_sign").click(function () {
     var popup = $(this).attr("btn-id");
@@ -604,6 +621,50 @@ $(".btn_sign").click(function () {
         return false;
     })
 });
+
+$('input[type="email"]').change(function () {
+    var email = $(this).val();
+    if (validateEmail(email)) {
+        console.log("email validated");
+        $(this).parent(".form-group").find(".icon").addClass("icon-check");
+        return true;
+    } else {
+        console.log("email not validated");
+        return false;
+    }
+})
+$('input[type="text"]').change(function () {
+    var phone = $(this).val();
+    if (validatePhone(phone)) {
+        console.log("phone validated");
+        $(this).parent(".form-group").find(".icon").addClass("icon-check");
+        return true;
+    } else {
+        console.log("phone not validated");
+        return false;
+    }
+})
+$('input').keyup(function (e) {
+    if (e.which === 13) {
+        e.preventDefault();
+        // $('#regForm').submit();
+        dataCheck();
+    }
+});
+
+function dataCheck() {
+    var email = $('input[type="email"]').val(),
+        phone = $('input[type="text"]').val();
+
+    if (validateEmail(email) && validatePhone(phone)) {
+        console.log("form validated");
+        $(".form-group .overlay").addClass("is-done");
+
+    } else {
+        console.log("form not validated");
+    }
+}
+
 
 $(".chart-box").on("mouseenter", function () {
     TweenMax.to($(this), 0.5, { scale: 1.05, transformOrigin: "50% 50%" });
