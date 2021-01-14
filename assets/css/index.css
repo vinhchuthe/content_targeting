@@ -1362,6 +1362,10 @@ body {
   font-size: 18px;
 }
 
+.vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan--body .pricingPlansCalculator__select.pc-hide {
+  display: none;
+}
+
 .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content-header p {
   font-family: GILROY-LIGHT;
   font-size: 30px;
@@ -2268,9 +2272,20 @@ body {
   .vct-wrapper .main-content-wrapper .content-feature .content-feature--inner .feature-body .feature-body-container .feature-body-bot-wrapper .feature-chart-wrapper .feature-chart-body .mb-popup-list {
     display: block !important;
   }
+  .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body {
+    height: 100%;
+    padding: 30px 0;
+  }
   .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container {
     max-width: 85vw;
     min-width: 85vw;
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
+    margin: 0 auto;
+    z-index: 2;
+    top: 0;
+    left: 0;
   }
   .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-header .profile-header-text {
     font-size: 24px;
@@ -2304,6 +2319,9 @@ body {
   .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan .profile-pricePlan--body .pricingPlansCalculator__slider.mb-hide {
     display: none;
   }
+  .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-pricePlan .profile-pricePlan--body .pricingPlansCalculator__select.pc-hide {
+    display: block;
+  }
   .vct-wrapper .main-content-wrapper .content-profile .content-profile--inner .profile-body .profile-body-container .profile-body-content-grid .profile-content-item .profile-tab-content .tab-content .tab-content-header p {
     font-size: 26px;
   }
@@ -2315,6 +2333,21 @@ body {
   }
   .vct-wrapper .main-content-wrapper .content-baogia.mb-hidden {
     display: none;
+  }
+  .vct-wrapper .footer-wrapper .footer-wrapper-container {
+    padding: 30px 0;
+  }
+  .vct-wrapper .footer-wrapper .footer-wrapper-container .footer-wrapper-grid {
+    display: block;
+  }
+  .vct-wrapper .footer-wrapper .footer-wrapper-container .footer-wrapper-grid .footer-wrapper-logo {
+    display: none;
+  }
+  .vct-wrapper .footer-wrapper .footer-wrapper-container .footer-wrapper-grid .footer-wrapper-social {
+    display: none;
+  }
+  .vct-wrapper .footer-wrapper .footer-wrapper-container .footer-wrapper-grid .footer-wrapper-sign p {
+    text-align: center;
   }
   .vct-wrapper .tooltip {
     display: none;

@@ -1260,6 +1260,11 @@ body {
                                                 }
                                             }
                                         }
+                                        .pricingPlansCalculator__select {
+                                            &.pc-hide {
+                                                display: none;
+                                            }
+                                        }
                                     }
                                 }
                                 .profile-tab-content {
@@ -2087,6 +2092,7 @@ body {
                 }
             }
         }
+        // main content
         .main-content-wrapper {
             .content-banner {
                 padding: 0 0 100px 0;
@@ -2359,9 +2365,18 @@ body {
             .content-profile {
                 .content-profile--inner {
                     .profile-body {
+                        height: 100%;
+                        padding: 30px 0;
+
                         .profile-body-container {
                             max-width: 85vw;
                             min-width: 85vw;
+                            position: relative;
+                            transform: none;
+                            margin: 0 auto;
+                            z-index: 2;
+                            top: 0;
+                            left: 0;
 
                             .profile-body-header {
                                 .profile-header-text {
@@ -2401,6 +2416,11 @@ body {
                                                     display: none;
                                                 }
                                             }
+                                            .pricingPlansCalculator__select {
+                                                &.pc-hide {
+                                                    display: block;
+                                                }
+                                            }
                                         }
                                     }
                                     .profile-tab-content {
@@ -2432,7 +2452,26 @@ body {
                 }
             }
         }
-
+        // Footer
+        .footer-wrapper {
+            .footer-wrapper-container {
+                padding: 30px 0;
+                .footer-wrapper-grid {
+                    display: block;
+                    .footer-wrapper-logo {
+                        display: none;
+                    }
+                    .footer-wrapper-social {
+                        display: none;
+                    }
+                    .footer-wrapper-sign {
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
         // tooltip
         .tooltip {
             display: none;
