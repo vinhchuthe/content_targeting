@@ -7,6 +7,8 @@
     <title>Content Targeting - Tiên phong trong việc kết hợp công nghệ vào báo chí</title>
     <link rel="icon" href="https://tuyenbai.admicro.vn/wp-content/themes/contentmarketing/dist/images/favicon.png">
     <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
@@ -23,7 +25,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="header-gird-col col-right">
+                    <div class="header-gird-col col-right" id="nav-menu">
                         <div class="header-navbar-nav">
                             <ol>
                                 <li class="header-navbar-item">
@@ -39,7 +41,7 @@
                                             <a href="#feature" class="sub-menu-item-link">Điểm nổi bật</a>
                                         </li>
                                         <li class="sub-menu-item" id="sub-menu4">
-                                            <a href="#baogia" class="sub-menu-item-link">Báo giá</a>
+                                            <a href="#profile" class="sub-menu-item-link">Báo giá</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -51,6 +53,13 @@
                                     <span data-text="Liên hệ tư vấn">Liên hệ tư vấn</span>
                                 </span>
                             </button>
+                        </div>
+                    </div>
+                    <div class="header-mobile-nav">
+                        <div class="header-mb-button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                 </div>
@@ -168,7 +177,7 @@
                                         <div class="issue-content-box box-yellow">
                                             <div class="issue-box-header">
                                                 <p>
-                                                    Content Marketing
+                                                    Bài PR thông thường
                                                     <span>
                                                         <img src="./assets/img/icon/arrow-white.png" alt="">
                                                     </span>
@@ -217,8 +226,8 @@
             <div class="content-scroll" id="scroll">
                 <div class="content-scroll-header">
                     <div class="scroll-header-grid">
-                        <div class="scroll-header-grid-item scroll-header-1">
-                            <div class="scroll-header-box box-white">
+                        <div class="scroll-header-grid-item scroll-header-1 mb-hidden">
+                            <div class="scroll-header-box box-yellow">
                                 <div class="scroll-box-header">
                                     <p>...</p>
                                 </div>
@@ -232,11 +241,11 @@
                                 </div>
                             </div>
                             <div class="scroll-box-icon">
-                                <img src="./assets/img/icon/plus-icon.png" alt="">
+                                <img src="./assets/img/icon/plus-icon-o.png" alt="">
                             </div>
                         </div>
-                        <div class="scroll-header-grid-item scroll-header-2">
-                            <div class="scroll-header-box box-yellow">
+                        <div class="scroll-header-grid-item scroll-header-2 mb-hidden">
+                            <div class="scroll-header-box box-white">
                                 <div class="scroll-box-header">
                                     <p>...</p>
                                 </div>
@@ -250,11 +259,11 @@
                                 </div>
                             </div>
                             <div class="scroll-box-icon">
-                                <img src="./assets/img/icon/equal-icon.png" alt="">
+                                <img src="./assets/img/icon/equal-icon-o.png" alt="">
                             </div>
                         </div>
-                        <div class="scroll-header-grid-item scroll-header-3">
-                            <div class="scroll-header-box box-white">
+                        <div class="scroll-header-grid-item scroll-header-3 mb-hidden">
+                            <div class="scroll-header-box box-yellow">
                                 <div class="scroll-box-header">
                                     <p>...</p>
                                 </div>
@@ -268,24 +277,27 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="scroll-header-grid-item scroll-header-mb">
+                            <img src="./assets/img/scroll/scroll-header-mb.png" alt="">
+                        </div>
                     </div>
                 </div>
                 <div class="content-scroll-body-wrapper">
                     <div class="content-scroll-body">
                         <div class="scroll-body-item item1" hover-img="./assets/img/scroll/hover-img1.gif">
-                            Tận dụng tối đa lượng <br> data có được
+                            <span>Tận dụng tối đa lượng <br> data có được</span>
                             <div class="scroll-body-img mb-show">
                                 <img src="./assets/img/scroll/hover-img1.gif" alt="">
                             </div>
                         </div>
                         <div class="scroll-body-item item2" hover-img="./assets/img/scroll/hover-img2.gif">
-                            Tăng hiệu quả performance
+                            <span>Tăng hiệu quả performance</span>
                             <div class="scroll-body-img mb-show">
                                 <img src="./assets/img/scroll/hover-img2.gif" alt="">
                             </div>
                         </div>
                         <div class="scroll-body-item item3" hover-img="./assets/img/scroll/hover-img3.gif">
-                            Tối ưu ngân sách của nhãn hàng
+                            <span>Tối ưu ngân sách của nhãn hàng</span>
                             <div class="scroll-body-img mb-show">
                                 <img src="./assets/img/scroll/hover-img3.gif" alt="">
                             </div>
@@ -314,33 +326,48 @@
                                     </div>
                                     <div class="feature-top-grid-item item-right">
                                         <div class="grid-list">
-                                            <ul>
-                                                <li class="grid-list-item item-active"
-                                                    data-id="./assets/img/feature/feature-img1.png">
+                                            <div class="grid-list-item item-active" id="mb-slick0"
+                                                data-id="./assets/img/feature/feature-img1.png">
+                                                <span class="mb-hidden">
                                                     Target bài được tới đúng tệp
                                                     <br>
                                                     TA của KH
-                                                </li>
-                                                <li class="grid-list-item"
-                                                    data-id="./assets/img/feature/feature-img2.png">
+                                                </span>
+                                                <span class="pc-hidden">
+                                                    Target bài được tới đúng tệp TA của KH
+                                                </span>
+                                            </div>
+                                            <div class="grid-list-item" id="mb-slick1"
+                                                data-id="./assets/img/feature/feature-img2.png">
+                                                <span class="mb-hidden">
                                                     Customize nội dung/thông điệp
                                                     <br>
                                                     marketing trong CTA tới từng tệp TA
-                                                </li>
-                                                <li class="grid-list-item"
-                                                    data-id="./assets/img/feature/feature-img3.png">
+                                                </span>
+                                                <span class="pc-hidden">
+                                                    Customize nội dung/thông điệp marketing trong CTA tới từng tệp TA
+                                                </span>
+                                            </div>
+                                            <div class="grid-list-item" id="mb-slick2"
+                                                data-id="./assets/img/feature/feature-img3.png">
+                                                <span>
                                                     Kéo traffic về trang đích mong muốn
-                                                </li>
-                                                <li class="grid-list-item"
-                                                    data-id="./assets/img/feature/feature-img4.png">
+                                                </span>
+                                            </div>
+                                            <div class="grid-list-item" id="mb-slick3"
+                                                data-id="./assets/img/feature/feature-img4.png">
+                                                <span class="mb-hidden">
                                                     Thu được tệp data user
                                                     <br>
                                                     (đọc bài/tương tác trong bài)
                                                     <br>
                                                     hỗ trợ KH tiếp tục chạy campaign
-
-                                                </li>
-                                            </ul>
+                                                </span>
+                                                <span class="pc-hidden">
+                                                    Thu được tệp data user (đọc bài/tương tác trong bài) hỗ trợ KH tiếp
+                                                    tục chạy campaign
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -629,6 +656,33 @@
                                                     xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALsAAAAICAYAAAChzo6xAAAABHNCSVQICAgIfAhkiAAAAK5JREFUWEftmEsKAjEAQ182uhfPoOgdRO8gbnXn/W8QKczIMJ8DtE23baF5DSGtbLM1JB2AN/C1fd1cmIkQqICA1swu6VYMDryAfdFhWxXoyRFDYDu8R7NPUxy4zHfE7HFR7QRKWi9SvHZROX8IrBEoZn8MleUJ7IIpBFol8O/sko7AZzD+KTWm1SvvV9figSqppP19nvbp7P2apBXlq78xo7hp2ts+tyI6Ovok8AMWLyv1UBglZgAAAABJRU5ErkJggg==" />
                                             </g>
                                         </svg>
+                                        <div class="mb-chart pc-hidden">
+                                            <div class="mb-chart-content">
+                                                <img src="./assets/img/feature/mb-feature-chart.png" alt="">
+                                            </div>
+                                            <div class="mb-chart-zoom">
+                                                <a href="./assets/img/feature/mb-feature-chart.png"
+                                                    data-lightbox="example-1">
+                                                    <img src="./assets/img/icon/full-screen.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="mb-popup-list pc-hidden">
+                                            <div class="mb-popup-list-item mb-popup1">
+                                                <img src="./assets/img/popup/popup1.png" alt="">
+                                            </div>
+                                            <div class="mb-popup-list-item mb-popup2">
+                                                <a href="https://tuyenbai.admicro.vn/demo/maybelline/" target="_blank">
+                                                    <img src="./assets/img/popup/popup2.png" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="mb-popup-list-item mb-popup3">
+                                                <a href="https://drive.google.com/file/d/1qlGOhSjWfHc2bIqczsPJWTl4i3EGG0vc/view"
+                                                    target="_blank">
+                                                    <img src="./assets/img/popup/popup3.png" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -798,7 +852,7 @@
             <!-- End profile -->
 
             <!-- Báo giá -->
-            <div class="content-baogia" id="baogia">
+            <div class="content-baogia mb-hidden" id="baogia">
                 <div class="content-baogia--inner">
                     <div class="baogia-body">
                         <!-- particles-bubble -->
@@ -1076,8 +1130,10 @@
     <script src="./assets/js/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/ScrollMagic.js"></script>
     <script src="./assets/js/animation.gsap.js"></script>
+    <script src="./assets/js/lightbox-plus-jquery.min.js"></script>
     <script src="./assets/js/jquery.nicescroll.js"></script>
     <script src="./assets/js/particles.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
     <script src="./assets/js/index.js"></script>
 </body>
 

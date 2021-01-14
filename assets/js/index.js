@@ -1,3 +1,8 @@
+// scroll top
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+}
+
 // ------ particlesJS --------
 particlesJS('particles-js0',
     {
@@ -570,16 +575,6 @@ $("body").niceScroll({
     scrollspeed: '80',
     mousescrollstep: 20,
 });
-$(window).on("load", function () {
-    var width = $(window).width();
-    if (width <= 767) {
-        $("body").getNiceScroll().remove();
-
-        // Scroll section
-        controller.destroy(true);
-        blockScroll.destroy(true);
-    }
-});
 
 // -------------- Popup ----------------------
 
@@ -861,6 +856,10 @@ $(".navbar-item-link").click(function () {
 });
 
 $(window).scroll(function () {
+    scrollTarget();
+})
+
+function scrollTarget() {
     //get current sroll position
     var scrollPosition = $(window).scrollTop();
     //get the position of the containers
@@ -868,7 +867,7 @@ $(window).scroll(function () {
         issue = $("#issue").offset().top,
         scroll = $("#scroll").offset().top,
         feature = $("#feature").offset().top,
-        baogia = $("#baogia").offset().top;
+        baogia = $("#profile").offset().top;
 
     if (scrollPosition >= banner) {
         $(".navbar-item-link").html("Content Targeting");
@@ -894,8 +893,7 @@ $(window).scroll(function () {
         $(".sub-menu-item").siblings().removeClass("hide-sub");
         $("#sub-menu4").addClass("hide-sub");
     }
-
-})
+}
 
 var nav_link = $(".sub-menu-item-link");
 $(".sub-menu-item-link").on("click", function () {
@@ -916,3 +914,52 @@ $(".sub-menu-item-link").on("click", function () {
     return false;
 });
 
+
+// --------------- Mobile ------------------
+$(window).on("load", function () {
+    var width = $(window).width();
+    if (width <= 767) {
+
+        // Nicescroll
+        $("body").getNiceScroll().remove();
+
+        // Scroll section
+        controller.destroy(true);
+        blockScroll.destroy(true);
+
+        // disable window scroll event handler
+        $(window).unbind("scroll");
+
+        // header
+        $(".header-mb-button").click(function () {
+            $("#nav-menu").toggleClass("mb-open-menu");
+        });
+
+        // ------------ feature --------------
+
+        // Feature top
+        $(".grid-list").slick({
+            arrows: false,
+            speed: 1000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        })
+        $(".grid-list").on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            $(".grid-list-item").removeClass("item-active");
+            $("#mb-slick" + currentSlide).addClass("item-active");
+            var img = $("#mb-slick" + currentSlide).attr("data-id");
+            $("#fgrid-img img").addClass("hide-img");
+            setTimeout(function () {
+                $("#fgrid-img img").attr("src", img);
+            }, 400);
+            setTimeout(function () {
+                $("#fgrid-img img").removeClass("hide-img");
+            }, 600);
+        });
+
+        // Feature bot
+
+    }
+});
