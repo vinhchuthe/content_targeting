@@ -777,6 +777,7 @@ $(".pricePlan--header-title").click(function () {
     $(this).addClass("header-active");
     $(".tab-content").removeClass("tab-active");
     $("#" + tab).addClass("tab-active");
+    $("#plan-user").val($(this).attr("range"));
 });
 
 // ------------------ Scroll ---------------------
@@ -959,7 +960,53 @@ $(window).on("load", function () {
             }, 600);
         });
 
-        // Feature bot
+        // Profile
+        $("#plan-user").on('change', function () {
+            var val = $(this).val();
+            if (val == 0) {
+                tab = "tab4";
+                $(".pricePlan--header-title").removeClass("header-active");
+                $(".tab-content").removeClass("tab-active");
+                $("#tab-header4").addClass("header-active");
+                $("#tab4").addClass("tab-active");
+                // console.log(tab);
+            } else if (val == 1) {
+                tab = "tab4";
+                $(".pricePlan--header-title").removeClass("header-active");
+                $(".tab-content").removeClass("tab-active");
+                $("#tab-header4").addClass("header-active");
+                $("#tab4").addClass("tab-active");
+                // console.log(tab);
+            } else if (val == 2) {
+                tab = "tab1";
+                $(".pricePlan--header-title").removeClass("header-active");
+                $(".tab-content").removeClass("tab-active");
+                $("#tab-header1").addClass("header-active");
+                $("#tab1").addClass("tab-active");
+                // console.log(tab);
+            } else if (val == 3) {
+                tab = "tab2";
+                $(".pricePlan--header-title").removeClass("header-active");
+                $(".tab-content").removeClass("tab-active");
+                $("#tab-header2").addClass("header-active");
+                $("#tab2").addClass("tab-active");
+                // console.log(tab);
+            } else if (val == 4) {
+                tab = "tab3";
+                $(".pricePlan--header-title").removeClass("header-active");
+                $(".tab-content").removeClass("tab-active");
+                $("#tab-header3").addClass("header-active");
+                $("#tab3").addClass("tab-active");
+                // console.log(tab);
+            } else if (val == 5) {
+                tab = "tab4";
+                $(".pricePlan--header-title").removeClass("header-active");
+                $(".tab-content").removeClass("tab-active");
+                $("#tab-header4").addClass("header-active");
+                $("#tab4").addClass("tab-active");
+                // console.log(tab);
+            }
+        });
 
     }
 });

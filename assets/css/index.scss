@@ -772,52 +772,33 @@ body {
                             box-shadow: -5px 5px 16px 1px rgba(0, 0, 0, 0.4);
                             transition: all 0.5s;
 
-                            &.box-yellow {
-                                background-color: $yellow;
-
-                                .scroll-box-header {
-                                    p {
-                                        color: #000;
-                                    }
-                                }
-                                .scroll-box-content {
-                                    border-top: 1px solid #000;
-                                }
-                            }
-                            &.box-white {
-                                background-color: #fff;
-
-                                .scroll-box-header {
-                                    p {
-                                        color: #e1e1e1;
-                                    }
-                                }
-                                .scroll-box-content {
-                                    border-top: 1px solid $gray;
-
-                                    p {
-                                        -webkit-text-stroke: 1px $gray;
-                                        -webkit-text-fill-color: white;
-                                    }
-                                }
-                            }
+                            background-color: #fff;
 
                             .scroll-box-header {
                                 p {
+                                    color: #e1e1e1;
                                     font-size: 24px;
                                     line-height: 0.9;
                                     margin-bottom: 10px;
+                                    transition: all 0.5s;
                                 }
                             }
                             .scroll-box-content {
+                                border-top: 1px solid $gray;
                                 padding: 15px 0 0;
+                                transition: all 0.5s;
+
                                 p {
+                                    -webkit-text-stroke: 1px $gray;
+                                    -webkit-text-fill-color: white;
+
                                     font-size: 36px;
                                     color: #000;
                                     font-family: GILROY-BOLD;
                                     line-height: 1;
                                     display: flex;
                                     align-items: center;
+                                    transition: all 0.5s;
 
                                     span {
                                         display: block;
@@ -833,6 +814,68 @@ body {
                                     }
                                 }
                             }
+
+                            // &.box-yellow {
+                            //     background-color: $yellow;
+
+                            //     .scroll-box-header {
+                            //         p {
+                            //             color: #000;
+                            //         }
+                            //     }
+                            //     .scroll-box-content {
+                            //         border-top: 1px solid #000;
+                            //     }
+                            // }
+                            // &.box-white {
+                            //     background-color: #fff;
+
+                            //     .scroll-box-header {
+                            //         p {
+                            //             color: #e1e1e1;
+                            //         }
+                            //     }
+                            //     .scroll-box-content {
+                            //         border-top: 1px solid $gray;
+
+                            //         p {
+                            //             -webkit-text-stroke: 1px $gray;
+                            //             -webkit-text-fill-color: white;
+                            //         }
+                            //     }
+                            // }
+
+                            // .scroll-box-header {
+                            //     p {
+                            //         font-size: 24px;
+                            //         line-height: 0.9;
+                            //         margin-bottom: 10px;
+                            //     }
+                            // }
+                            // .scroll-box-content {
+                            //     padding: 15px 0 0;
+                            //     p {
+                            //         font-size: 36px;
+                            //         color: #000;
+                            //         font-family: GILROY-BOLD;
+                            //         line-height: 1;
+                            //         display: flex;
+                            //         align-items: center;
+
+                            //         span {
+                            //             display: block;
+                            //             width: 20px;
+                            //             height: auto;
+                            //             margin-left: 15px;
+
+                            //             img {
+                            //                 width: 100%;
+                            //                 height: auto;
+                            //                 display: block;
+                            //             }
+                            //         }
+                            //     }
+                            // }
                         }
                         .scroll-box-icon {
                             position: absolute;
@@ -846,31 +889,64 @@ body {
                             justify-content: center;
                             align-items: center;
                             transition: all 0.3s;
+                            background-color: #fff;
+
+                            & > img {
+                                &:last-child {
+                                    display: none;
+                                }
+                            }
                         }
 
                         &.scroll-header-1 {
                             width: 250px;
 
-                            .scroll-box-icon {
-                                background-color: $gray;
-                            }
+                            // .scroll-box-icon {
+                            //     background-color: $gray;
+                            // }
                         }
                         &.scroll-header-2 {
                             width: 330px;
 
-                            .scroll-box-icon {
-                                background-color: #fff;
-                            }
+                            // .scroll-box-icon {
+                            //     background-color: #fff;
+                            // }
                         }
 
                         &:hover {
                             .scroll-header-box {
                                 -webkit-box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
                                 box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+                                background-color: $yellow;
+                                transition: all 0.5s;
+
+                                .scroll-box-header {
+                                    p {
+                                        color: #000000;
+                                        transition: all 0.5s;
+                                    }
+                                }
+                                .scroll-box-content {
+                                    border-top: 1px solid #000000;
+
+                                    p {
+                                        -webkit-text-stroke: 0px #000000;
+                                        -webkit-text-fill-color: #000000;
+                                    }
+                                }
                             }
                             .scroll-box-icon {
                                 transform: rotate(360deg);
+                                background-color: $gray;
                                 transition: all 0.5s;
+                                & > img {
+                                    &:first-child {
+                                        display: none;
+                                    }
+                                    &:last-child {
+                                        display: block;
+                                    }
+                                }
                             }
                             transform: scale(1.1);
                             transition: all 0.3s;
@@ -2034,7 +2110,7 @@ body {
                             justify-content: center;
                             align-items: center;
                             background-color: #ffffff;
-                            // transform: scaleY(0);
+                            pointer-events: none;
                             transform-origin: top;
                             transition: all 0.5s;
 
@@ -2046,7 +2122,7 @@ body {
                             }
 
                             &.mb-open-menu {
-                                // transform: scaleY(1);
+                                pointer-events: auto;
                                 height: 100%;
                                 transform-origin: top;
                                 transition: all 0.5s;
@@ -2396,6 +2472,8 @@ body {
                                         padding: 20px 10px 30px;
                                         border-left: none;
                                         border-top: 2px solid #f5df4d;
+                                        min-height: 450px;
+                                        max-height: 450px;
                                     }
                                     .profile-pricePlan {
                                         .profile-pricePlan--header {
@@ -2419,6 +2497,12 @@ body {
                                             .pricingPlansCalculator__select {
                                                 &.pc-hide {
                                                     display: block;
+                                                }
+                                                .selectPlans {
+                                                    font-family: GILROY-REGULAR;
+                                                    font-size: 18px;
+                                                    padding: 8px 24px 8px 10px;
+                                                    width: 100%;
                                                 }
                                             }
                                         }
@@ -2475,6 +2559,40 @@ body {
         // tooltip
         .tooltip {
             display: none;
+        }
+        // popup
+        .popup {
+            .popup-box {
+                &.pop4 {
+                    .popup-body {
+                        min-width: 80vw;
+                        padding: 40px 10px;
+                        border-radius: 30px;
+
+                        .popup-body-content {
+                            .popup-body-content--inner {
+                                .popup-header {
+                                    p {
+                                        font-size: 20px;
+                                    }
+                                }
+                                .popup-content {
+                                    #regForm {
+                                        .form-group {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                                .popup-footer {
+                                    .footer-title {
+                                        font-size: 16px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
