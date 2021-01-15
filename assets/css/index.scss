@@ -814,68 +814,6 @@ body {
                                     }
                                 }
                             }
-
-                            // &.box-yellow {
-                            //     background-color: $yellow;
-
-                            //     .scroll-box-header {
-                            //         p {
-                            //             color: #000;
-                            //         }
-                            //     }
-                            //     .scroll-box-content {
-                            //         border-top: 1px solid #000;
-                            //     }
-                            // }
-                            // &.box-white {
-                            //     background-color: #fff;
-
-                            //     .scroll-box-header {
-                            //         p {
-                            //             color: #e1e1e1;
-                            //         }
-                            //     }
-                            //     .scroll-box-content {
-                            //         border-top: 1px solid $gray;
-
-                            //         p {
-                            //             -webkit-text-stroke: 1px $gray;
-                            //             -webkit-text-fill-color: white;
-                            //         }
-                            //     }
-                            // }
-
-                            // .scroll-box-header {
-                            //     p {
-                            //         font-size: 24px;
-                            //         line-height: 0.9;
-                            //         margin-bottom: 10px;
-                            //     }
-                            // }
-                            // .scroll-box-content {
-                            //     padding: 15px 0 0;
-                            //     p {
-                            //         font-size: 36px;
-                            //         color: #000;
-                            //         font-family: GILROY-BOLD;
-                            //         line-height: 1;
-                            //         display: flex;
-                            //         align-items: center;
-
-                            //         span {
-                            //             display: block;
-                            //             width: 20px;
-                            //             height: auto;
-                            //             margin-left: 15px;
-
-                            //             img {
-                            //                 width: 100%;
-                            //                 height: auto;
-                            //                 display: block;
-                            //             }
-                            //         }
-                            //     }
-                            // }
                         }
                         .scroll-box-icon {
                             position: absolute;
@@ -950,13 +888,6 @@ body {
                             }
                             transform: scale(1.1);
                             transition: all 0.3s;
-                        }
-
-                        &.scroll-header-mb {
-                            display: none;
-                            img {
-                                @extend %img;
-                            }
                         }
                     }
                 }
@@ -2282,17 +2213,26 @@ body {
 
                     .scroll-header-grid {
                         flex-direction: column;
-                        padding: 0;
+                        padding: 0 15px;
 
                         .scroll-header-grid-item {
-                            margin: 0;
+                            margin: 0 0 35px 0;
 
-                            &.mb-hidden {
-                                display: none;
+                            .scroll-header-box {
+                                .scroll-box-content {
+                                    p {
+                                        font-size: 30px;
+                                    }
+                                }
                             }
-                            &.scroll-header-mb {
-                                display: block;
+
+                            &.scroll-header-1 {
+                                width: 200px;
                             }
+                            &.scroll-header-2 {
+                                width: 280px;
+                            }
+
                             &:hover {
                                 transform: none;
                             }
@@ -2379,6 +2319,29 @@ body {
                                             &.slick-slider {
                                                 width: 100vw;
                                             }
+
+                                            // slide btn
+                                            .slick-arrow {
+                                                bottom: -10px;
+                                                top: unset;
+                                                
+                                                transform: translate(-50%, 0);
+
+                                                &.slick-prev {
+                                                    left: 47%;
+                                                    margin-left: -20px;
+                                                }
+                                                &.slick-next {
+                                                    right: 43%;
+                                                    left: unset;
+                                                    margin-right: -20px;
+                                                }
+
+                                                &::before {
+                                                    font-size: 25px;
+                                                    color: black;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -2406,7 +2369,7 @@ body {
                                                 overflow-x: scroll;
                                                 img {
                                                     display: block;
-                                                    max-height: 700px;
+                                                    max-height: 500px;
                                                     width: auto;
                                                 }
                                             }
@@ -2594,5 +2557,11 @@ body {
                 }
             }
         }
+    }
+    // lightbox
+    #lightbox {
+        position: fixed;
+        top: 50% !important;
+        transform: translateY(-50%);
     }
 }
