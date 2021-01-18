@@ -19,7 +19,20 @@ const usersRef = dbRef.child('users');
 
 // Push
 const addUserInputsUI = document.getElementsByClassName("user-input");
+
+// this object will hold the new user information
 let newuser = {};
+
+// loop through View to get the data for the model 
+for (let i = 0, len = addUserInputsUI.length; i < len; i++) {
+    let key = addUserInputsUI[i].getAttribute('data-key');
+    let value = addUserInputsUI[i].value;
+    newuser[key] = value;
+}
+
+usersRef.push(newuser);
+
+console.log(newuser);
 
 
 // ------- End Firebase --------
