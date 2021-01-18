@@ -967,7 +967,7 @@ $(".sub-menu-item-link").on("click", function () {
 // --------------- Mobile ------------------
 $(window).on("load", function () {
     var width = $(window).width();
-    if (width <= 767) {
+    if (width <= 768) {
 
         // Nicescroll
         $("body").getNiceScroll().remove();

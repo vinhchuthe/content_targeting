@@ -2014,8 +2014,145 @@ body {
     }
 }
 
+// Tablet
+@media (max-width: 1024px) {
+    .vct-wrapper {
+        // main content
+        .main-content-wrapper {
+            .content-banner {
+                padding: 0 0 100px 0;
+            }
+            .content-issue {
+                .content-issue--inner {
+                    .issue-body {
+                        .issue-body-container {
+                            height: 100vh;
+
+                            .issue-body-header-container {
+                                height: 350px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-scroll {
+                .content-scroll-header {
+                    .scroll-header-grid {
+                        padding: 0 25px;
+
+                        .scroll-header-grid-item {
+                            .scroll-header-box {
+                                .scroll-box-content {
+                                    p {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+
+                            &.scroll-header-1 {
+                                width: 210px;
+                            }
+                            &.scroll-header-2 {
+                                width: 290px;
+                            }
+                        }
+                    }
+                }
+                .content-scroll-body-wrapper {
+                    .content-scroll-body {
+                        .scroll-body-item {
+                            margin: 0 30px;
+
+                            &.item1 {
+                                min-width: 470px;
+                                max-width: 470px;
+                            }
+                            &.item2 {
+                                min-width: 550px;
+                                max-width: 550px;
+                            }
+                            &.item3 {
+                                max-width: 630px;
+                                min-width: 630px;
+                            }
+                        }
+                    }
+                }
+            }
+            .content-feature {
+                .content-feature--inner {
+                    .feature-body {
+                        .feature-body-container {
+                            .feature-body-top-wrapper {
+                                .feature-top-grid {
+                                    .feature-top-grid-item {
+                                        .grid-img {
+                                            max-width: 450px;
+                                        }
+                                        .grid-list {
+                                            .grid-list-item {
+                                                span {
+                                                    font-size: 28px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-profile {
+                .content-profile--inner {
+                    .profile-body {
+                        .profile-body-container {
+                            min-width: 95vw;
+                            max-width: 95vw;
+                        }
+                    }
+                }
+            }
+            .content-baogia {
+                .content-baogia--inner {
+                    .baogia-body {
+                        .baogia-body-container {
+                            .baogia-body-content {
+                                .baogia-body-grid {
+                                    .baogia-grid-box {
+                                        max-width: 240px;
+
+                                        .baogia-box-header {
+                                            .box-header-title {
+                                                font-size: 24px;
+                                            }
+                                            .box-header-price {
+                                                font-size: 30px;
+
+                                                span {
+                                                    &.price-deco2 {
+                                                        top: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // mobile
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .vct-wrapper {
         overflow: hidden;
 
@@ -2187,8 +2324,8 @@ body {
                                     flex-direction: column;
 
                                     .issue-content-item {
-                                        max-width: 95vw;
-                                        margin: 0 auto 25px auto !important;
+                                        max-width: 70vw;
+                                        margin: 0 auto 45px auto !important;
 
                                         .issue-content-box {
                                             box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
@@ -2212,25 +2349,24 @@ body {
                     padding-top: 30px;
 
                     .scroll-header-grid {
-                        flex-direction: column;
                         padding: 0 15px;
 
                         .scroll-header-grid-item {
-                            margin: 0 0 35px 0;
+                            margin: 0 35px 35px 0;
 
                             .scroll-header-box {
                                 .scroll-box-content {
                                     p {
-                                        font-size: 30px;
+                                        font-size: 22px;
                                     }
                                 }
                             }
 
                             &.scroll-header-1 {
-                                width: 200px;
+                                width: 170px;
                             }
                             &.scroll-header-2 {
-                                width: 280px;
+                                width: 230px;
                             }
 
                             &:hover {
@@ -2260,7 +2396,7 @@ body {
                                 transform: translateY(-50%);
                                 z-index: 2;
                                 padding: 0 15px;
-                                font-size: 25px;
+                                font-size: 30px;
                                 display: block;
                                 text-align: center;
                             }
@@ -2271,6 +2407,19 @@ body {
                                 &.mb-show {
                                     display: block;
                                 }
+                            }
+
+                            &.item1 {
+                                min-width: 500px;
+                                max-width: 500px;
+                            }
+                            &.item2 {
+                                min-width: 500px;
+                                max-width: 500px;
+                            }
+                            &.item3 {
+                                min-width: 500px;
+                                max-width: 500px;
                             }
                         }
                     }
@@ -2369,7 +2518,7 @@ body {
                                                 overflow-x: scroll;
                                                 img {
                                                     display: block;
-                                                    max-height: 500px;
+                                                    max-height: 650px;
                                                     width: auto;
                                                 }
                                             }
@@ -2393,41 +2542,48 @@ body {
                                         }
                                         .mb-popup-list {
                                             display: block !important;
-                                            .popup-slide {
-                                                position: relative;
 
-                                                .popup-slide-header {
-                                                    position: relative;
-                                                    margin-bottom: 10px;
+                                            .mb-popup-list-item {
+                                                width: 80%;
+                                                margin: 0 auto;
+                                                margin-bottom: 30px;
 
-                                                    img {
-                                                        width: 100%;
-                                                        display: block;
-                                                    }
-                                                }
-                                                .popup-slide-content {
+                                                .popup-slide {
                                                     position: relative;
 
-                                                    .popup-slide-content-item {
+                                                    .popup-slide-header {
                                                         position: relative;
-                                                        width: 100%;
+                                                        margin-bottom: 10px;
 
                                                         img {
                                                             width: 100%;
                                                             display: block;
                                                         }
                                                     }
-                                                    .slick-arrow {
-                                                        z-index: 3;
-                                                        &::before {
-                                                            color: #000000;
-                                                        }
+                                                    .popup-slide-content {
+                                                        position: relative;
 
-                                                        &.slick-prev {
-                                                            left: 0;
+                                                        .popup-slide-content-item {
+                                                            position: relative;
+                                                            width: 100%;
+
+                                                            img {
+                                                                width: 100%;
+                                                                display: block;
+                                                            }
                                                         }
-                                                        &.slick-next {
-                                                            right: 0;
+                                                        .slick-arrow {
+                                                            z-index: 3;
+                                                            &::before {
+                                                                color: #000000;
+                                                            }
+
+                                                            &.slick-prev {
+                                                                left: 0;
+                                                            }
+                                                            &.slick-next {
+                                                                right: 0;
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -2602,5 +2758,293 @@ body {
         position: fixed;
         top: 50% !important;
         transform: translateY(-50%);
+    }
+}
+
+@media (max-width: 500px) {
+    .vct-wrapper {
+        // main content
+        .main-content-wrapper {
+            .content-issue {
+                .content-issue--inner {
+                    .issue-body {
+                        .issue-body-container {
+                            height: 100%;
+                            padding: 0 0 50px 0;
+                            .issue-body-header-container {
+                                height: 150px;
+
+                                .issue-body-header {
+                                    .issue-body-header--text {
+                                        h3 {
+                                            font-size: 60px;
+                                        }
+                                    }
+                                }
+                            }
+                            .issue-body-content-cotnainer {
+                                .issue-content-grid {
+                                    flex-direction: column;
+
+                                    .issue-content-item {
+                                        max-width: 95vw;
+                                        margin: 0 auto 25px auto !important;
+
+                                        .issue-content-box {
+                                            box-shadow: -10px 10px 36px 10px rgba(0, 0, 0, 0.25);
+
+                                            &:hover {
+                                                transform: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-scroll {
+                height: 100% !important;
+                padding-bottom: 40px;
+
+                .content-scroll-header {
+                    padding-top: 30px;
+
+                    .scroll-header-grid {
+                        flex-direction: column;
+                        padding: 0 15px;
+
+                        .scroll-header-grid-item {
+                            margin: 0 0 35px 0;
+
+                            .scroll-header-box {
+                                .scroll-box-content {
+                                    p {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            &.scroll-header-1 {
+                                width: 200px;
+                            }
+                            &.scroll-header-2 {
+                                width: 280px;
+                            }
+
+                            &:hover {
+                                transform: none;
+                            }
+                        }
+                    }
+                }
+                .content-scroll-body-wrapper {
+                    .content-scroll-body {
+                        transform: none !important;
+                        margin: 0;
+                        flex-direction: column;
+                        height: 100%;
+
+                        .scroll-body-item {
+                            min-width: 100% !important;
+                            max-width: 100% !important;
+                            position: relative;
+                            margin: 15px 0 0;
+
+                            span {
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                width: 100%;
+                                transform: translateY(-50%);
+                                z-index: 2;
+                                padding: 0 15px;
+                                font-size: 25px;
+                                display: block;
+                                text-align: center;
+                            }
+
+                            .scroll-body-img {
+                                width: 70%;
+                                margin: 0 auto;
+                                &.mb-show {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .content-feature {
+                margin-bottom: 20px;
+
+                .content-feature--inner {
+                    .feature-body {
+                        .feature-body-container {
+                            .feature-body-top-wrapper {
+                                height: 100%;
+                                padding: 30px 0 40px;
+                                .feature-top-grid {
+                                    flex-direction: column;
+
+                                    .feature-top-grid-item {
+                                        &.item-left {
+                                            margin-right: 0;
+                                            margin-bottom: 20px;
+                                        }
+                                        .grid-img {
+                                            max-width: 100%;
+                                            width: 80%;
+                                            margin: 0 auto;
+                                        }
+                                        .grid-list {
+                                            .grid-list-item {
+                                                padding: 0 15px;
+                                                transition: all 0.5s;
+
+                                                span {
+                                                    font-size: 20px;
+                                                    text-align: center;
+                                                    display: block;
+
+                                                    &.mb-hidden {
+                                                        display: none;
+                                                    }
+                                                    &.pc-hidden {
+                                                        display: block;
+                                                    }
+                                                }
+                                            }
+                                            &.slick-slider {
+                                                width: 100vw;
+                                            }
+
+                                            // slide btn
+                                            .slick-arrow {
+                                                bottom: -10px;
+                                                top: unset;
+
+                                                transform: translate(-50%, 0);
+
+                                                &.slick-prev {
+                                                    left: 47%;
+                                                    margin-left: -20px;
+                                                }
+                                                &.slick-next {
+                                                    right: 43%;
+                                                    left: unset;
+                                                    margin-right: -20px;
+                                                }
+
+                                                &::before {
+                                                    font-size: 25px;
+                                                    color: black;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .feature-body-bot-wrapper {
+                                height: auto;
+
+                                .feature-chart-wrapper {
+                                    .feature-chart-header {
+                                        .feature-chart-title {
+                                            font-size: 24px;
+                                            line-height: 1.2;
+                                        }
+                                    }
+                                    .feature-chart-body {
+                                        #chart {
+                                            display: none;
+                                        }
+                                        .mb-chart {
+                                            display: block !important;
+                                            position: relative;
+                                            margin-top: 30px;
+
+                                            .mb-chart-content {
+                                                overflow-x: scroll;
+                                                img {
+                                                    display: block;
+                                                    max-height: 500px;
+                                                    width: auto;
+                                                }
+                                            }
+                                            .mb-chart-zoom {
+                                                position: absolute;
+                                                top: 0;
+                                                right: 15px;
+                                                width: 30px;
+                                                height: 30px;
+
+                                                a {
+                                                    display: block;
+
+                                                    img {
+                                                        display: block;
+                                                        width: 100%;
+                                                        height: auto;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .mb-popup-list {
+                                            display: block !important;
+
+                                            .mb-popup-list-item {
+                                                width: 100%;
+
+                                                .popup-slide {
+                                                    position: relative;
+
+                                                    .popup-slide-header {
+                                                        position: relative;
+                                                        margin-bottom: 10px;
+
+                                                        img {
+                                                            width: 100%;
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    .popup-slide-content {
+                                                        position: relative;
+
+                                                        .popup-slide-content-item {
+                                                            position: relative;
+                                                            width: 100%;
+
+                                                            img {
+                                                                width: 100%;
+                                                                display: block;
+                                                            }
+                                                        }
+                                                        .slick-arrow {
+                                                            z-index: 3;
+                                                            &::before {
+                                                                color: #000000;
+                                                            }
+
+                                                            &.slick-prev {
+                                                                left: 0;
+                                                            }
+                                                            &.slick-next {
+                                                                right: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
