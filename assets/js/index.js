@@ -974,6 +974,14 @@ $(window).on("load", function () {
             }, 600);
         });
 
+        // Feature bot
+        $(".popup-slide-content").slick({
+            speed: 1000,
+            slidesToShow: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+        })
+
         // ------------- Profile ---------------
         $("#plan-user").on('change', function () {
             var val = $(this).val();

@@ -2324,7 +2324,7 @@ body {
                                             .slick-arrow {
                                                 bottom: -10px;
                                                 top: unset;
-                                                
+
                                                 transform: translate(-50%, 0);
 
                                                 &.slick-prev {
@@ -2393,6 +2393,45 @@ body {
                                         }
                                         .mb-popup-list {
                                             display: block !important;
+                                            .popup-slide {
+                                                position: relative;
+
+                                                .popup-slide-header {
+                                                    position: relative;
+                                                    margin-bottom: 10px;
+
+                                                    img {
+                                                        width: 100%;
+                                                        display: block;
+                                                    }
+                                                }
+                                                .popup-slide-content {
+                                                    position: relative;
+
+                                                    .popup-slide-content-item {
+                                                        position: relative;
+                                                        width: 100%;
+
+                                                        img {
+                                                            width: 100%;
+                                                            display: block;
+                                                        }
+                                                    }
+                                                    .slick-arrow {
+                                                        z-index: 3;
+                                                        &::before {
+                                                            color: #000000;
+                                                        }
+
+                                                        &.slick-prev {
+                                                            left: 0;
+                                                        }
+                                                        &.slick-next {
+                                                            right: 0;
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
